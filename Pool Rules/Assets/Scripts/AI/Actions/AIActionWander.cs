@@ -1,41 +1,41 @@
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.TestTools;
 
 public class AIActionWander : AIAction
 {
-    [SerializeField] private float wanderRadius = 5f;
-    [SerializeField] private float wanderTimer = 5f;
+    [SerializeField] private NavMeshAgent childsNavMeshAgent;
+    [SerializeField] private float moveRange = 10f;
+    [SerializeField] private bool drawTargetGizmo = false;
 
-    private float timer;
-
-    public override void Initialization()
+    private void Awake()
     {
-        base.Initialization();
-        timer = wanderTimer;
+        if (childsNavMeshAgent == null) Debug.LogWarning("childsNavMeshAgent is null");
     }
 
     public override void PerformAction()
     {
-        Debug.Log("Wandering");
-
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
+        if (!childsNavMeshAgent.pathPending && childsNavMeshAgent.remainingDistance < 0.1f)
         {
-            Vector3 newPosition = RandomWanderPosition();
-            MoveToPosition(newPosition);
-            timer = wanderTimer;
+            MoveToRandomTarget();
         }
     }
 
-    private void MoveToPosition(Vector3 newPosition)
+    private void MoveToRandomTarget()
     {
-        transform.position = newPosition;
+        Vector3 randomDirection = Random.insideUnitSphere * moveRange;
+        randomDirection += transform.position;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, moveRange, NavMesh.AllAreas);
+        childsNavMeshAgent.SetDestination(hit.position);
     }
 
-    private Vector3 RandomWanderPosition()
+    private void OnDrawGizmos()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
-        randomDirection += transform.position;
-        return new Vector3(randomDirection.x, transform.position.y, randomDirection.z);
+        if (childsNavMeshAgent != null && childsNavMeshAgent.hasPath && drawTargetGizmo)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(childsNavMeshAgent.destination, 0.1f);
+        }
     }
 }
