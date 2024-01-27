@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159791679085482309}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -67,6 +67,9 @@ MonoBehaviour:
     Actions:
     - {fileID: 8071993729767563572}
     Transitions:
+    - Decision: {fileID: 9037931920541149747}
+      TrueState: Swimming
+      FalseState: 
     - Decision: {fileID: 5505042227532526824}
       TrueState: Idle
       FalseState: 
@@ -91,8 +94,15 @@ MonoBehaviour:
     - Decision: {fileID: 1618041434501086746}
       TrueState: Idle
       FalseState: 
+  - StateName: Swimming
+    Actions:
+    - {fileID: 1468218293473045665}
+    Transitions:
+    - Decision: {fileID: 9037931920541149747}
+      TrueState: 
+      FalseState: Wandering
   ActionsFrequency: 1
-  DecisionFrequency: 1
+  DecisionFrequency: 0.1
 --- !u!1 &540770998495738437
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510393d701af8a4390898691292d79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChance: 10
+  totalChance: 100
   odds: 4
 --- !u!1 &1109003012173149594
 GameObject:
@@ -183,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7e563b5f6e711428d153f651b59616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 0
+  logStateChange: 1
   childsNavMeshAgent: {fileID: 0}
   moveRange: 10
 --- !u!1 &2153378497901291874
@@ -231,8 +241,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
-  totalChance: 25
+  totalChance: 250
   odds: 1
+--- !u!1 &3472887007997786406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3490830386216430241}
+  - component: {fileID: 1468218293473045665}
+  m_Layer: 7
+  m_Name: Swimming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3490830386216430241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472887007997786406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6002079871833843843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468218293473045665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472887007997786406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce52f3b28f29e3a4b9227b85580db9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logStateChange: 1
+  childRuleStates: {fileID: 0}
+  childsNavMeshAgent: {fileID: 0}
+  swimmingSpeed: 2
+  swimmingBaseOffset: 0.3
+  moveRange: 10
 --- !u!1 &4211836975526865092
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d27031982cee1c94187eb338fb202fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 0
+  logStateChange: 1
   childRuleStates: {fileID: 0}
   childsNavMeshAgent: {fileID: 0}
   runningSpeed: 10
@@ -327,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
-  totalChance: 50
+  totalChance: 500
   odds: 1
 --- !u!1 &6599566436232330183
 GameObject:
@@ -417,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510393d701af8a4390898691292d79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChance: 15
+  totalChance: 150
   odds: 1
 --- !u!1 &7519654989907856960
 GameObject:
@@ -455,6 +515,7 @@ Transform:
   - {fileID: 5197442960905434438}
   - {fileID: 2872061157938177505}
   - {fileID: 5204268642132137429}
+  - {fileID: 6624502167698362279}
   m_Father: {fileID: 7209993043836213898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7709270322476137374
@@ -501,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2346125f00431e4e8d9d22828f774c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 0
+  logStateChange: 1
   childRuleStates: {fileID: 0}
 --- !u!1 &7881200447404499676
 GameObject:
@@ -548,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
-  totalChance: 100
+  totalChance: 1000
   odds: 1
   logDiceRolls: 0
 --- !u!1 &8207892104584454484
@@ -595,7 +656,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a704075df79225949a332a1c5f0d9a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 0
+  logStateChange: 1
+--- !u!1 &8368755154947531454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6624502167698362279}
+  - component: {fileID: 9037931920541149747}
+  m_Layer: 7
+  m_Name: StartSwimming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6624502167698362279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368755154947531454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5724771594168395576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9037931920541149747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368755154947531454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fa1bcc7742a0043b9547f148523394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childRuleStates: {fileID: 0}
 --- !u!1 &8447907720408484085
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510393d701af8a4390898691292d79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChance: 10
+  totalChance: 100
   odds: 4
 --- !u!1 &9061819864980180883
 GameObject:
@@ -676,6 +782,7 @@ Transform:
   - {fileID: 3978925907993871316}
   - {fileID: 4642458412720462126}
   - {fileID: 8265450202144486008}
+  - {fileID: 3490830386216430241}
   m_Father: {fileID: 7209993043836213898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9141637493617504378
