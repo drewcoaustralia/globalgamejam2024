@@ -1,13 +1,6 @@
 {
   "dependencies": {
-    "com.unity.ai.navigation": {
-      "version": "1.1.5",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.ai": "1.0.0"
-      },
-     "com.unity.2d.animation": {
+    "com.unity.2d.animation": {
       "version": "9.0.4",
       "depth": 0,
       "source": "registry",
@@ -38,6 +31,15 @@
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
+    },
+    "com.unity.ai.navigation": {
+      "version": "1.1.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.ai": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
       "version": "1.8.7",
