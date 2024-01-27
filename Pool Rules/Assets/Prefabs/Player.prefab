@@ -280,9 +280,16 @@ MonoBehaviour:
   throwPower: 15
   throwAngle: -30
   throwSpinMin: 30
-  throwSpinMax: 90
-  boxcaster: {fileID: 1288070898600394635}
+  throwSpinMax: 60
   pickupPosition: {fileID: 4085109616405257302}
+  raycastAngles:
+  - -30
+  - -20
+  - -10
+  - 0
+  - 10
+  - 20
+  - 30
 --- !u!54 &533954021477275594
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -27,7 +27,9 @@ public class ChildAnimationController : MonoBehaviour
     private SpriteRenderer clothesOnePieceRendBack;
     private Animator clothesOnePieceAnimBack;
 
-    [SerializeField] private Color tempColor;
+    private Color tempColor;
+
+    public AudioClip throwSound;
 
     void InitialSetup()
     {
@@ -77,6 +79,7 @@ public class ChildAnimationController : MonoBehaviour
 
     public void StartAnimating(bool start = true)
     {
+        AudioManager.Instance.PlayAudio(throwSound);
         skinAnim.enabled = start;
         clothesTrunksAnimFront.enabled = start;
         clothesTrunksAnimBack.enabled = start;
