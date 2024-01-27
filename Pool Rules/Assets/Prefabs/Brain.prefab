@@ -51,6 +51,9 @@ MonoBehaviour:
     Actions:
     - {fileID: 7204046991371069111}
     Transitions:
+    - Decision: {fileID: 9037931920541149747}
+      TrueState: Swimming
+      FalseState: 
     - Decision: {fileID: 696363969860364089}
       TrueState: Wandering
       FalseState: 
@@ -352,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
-  totalChance: 50
+  totalChance: 2000
   odds: 1
 --- !u!1 &3472887007997786406
 GameObject:
@@ -544,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
-  totalChance: 500
+  totalChance: 1500
   odds: 1
 --- !u!1 &5464416736663994920
 GameObject:
@@ -865,6 +868,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logStateChange: 1
   childRuleStates: {fileID: 0}
+  childNavMeshAgent: {fileID: 0}
+  drowningBaseOffset: 0.15
 --- !u!1 &7881200447404499676
 GameObject:
   m_ObjectHideFlags: 0

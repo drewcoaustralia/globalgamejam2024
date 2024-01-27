@@ -912,20 +912,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 4192052189887446674}
     m_Modifications:
     - target: {fileID: 123006969716326766, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: totalChance
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 123006969716326766, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childRuleStates
       value: 
       objectReference: {fileID: 453979999166173449}
     - target: {fileID: 159791679085482309, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: m_Name
       value: Brain
-      objectReference: {fileID: 0}
-    - target: {fileID: 752699322434660660, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: totalChance
-      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 752699322434660660, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childRuleStates
