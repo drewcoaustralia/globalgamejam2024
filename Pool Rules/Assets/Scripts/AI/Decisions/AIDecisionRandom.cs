@@ -13,7 +13,7 @@ public class AIDecisionRandom : AIDecision
         return EvaluateOdds();
     }
 
-    protected virtual bool EvaluateOdds()
+    private bool EvaluateOdds()
     {
         int dice = Maths.RollADice(totalChance);
         bool result = (dice <= odds);
