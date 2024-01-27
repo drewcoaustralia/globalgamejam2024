@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 1f;
-    public float pickupDist = 1f;
-    public float throwPower = 1f;
-    public float throwAngle = 30f; // positive is towards floor, negative towards sky
+    public float moveSpeed = 10f;
+    public float pickupDist = 1.5f;
+    public float throwPower = 15f;
+    public float throwAngle = -30f; // positive is towards floor, negative towards sky
     public float throwSpinMin = 30f;
-    public float throwSpinMax = 90f;
-    private Vector3 velocity = Vector2.zero;
-    public BoxCollider boxcaster;
+    public float throwSpinMax = 60f;
+    private Vector3 vel = Vector2.zero;
+    private Vector3 lastVelocityDirection = Vector2.zero;
     public Transform pickupPosition;
-    private GameObject raycastHitObj = null;
+    public List<float> raycastAngles = new List<float> { -30, -20, -10, 0, 10, 20, 30 };
+    private GameObject closestChild = null;
+    //private List<GameObject> foundChildren = new List<GameObject>();
     private bool handsEmpty = true;
     private GameObject heldObj = null;
 
@@ -22,60 +25,82 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void PerformRaycast()
+    void PerformRaycasts()
     {
-        // Bit shift the index of the layer (8) to get a bit mask
-        int layerMask = 1 << 6;
-
-        // This would cast rays only against colliders in layer 8.
-        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-        layerMask = ~layerMask;
+        // Bit shift the index of the layer (7) to get a bit mask
+        int layerMask = 1 << 7;
 
         RaycastHit hit;
+        float closestDistanceTemp = Mathf.Infinity;
+        GameObject closestChildTemp = null;
+        //foundChildren.Clear();
 
-        if (handsEmpty && Physics.BoxCast(boxcaster.bounds.center, boxcaster.transform.localScale * 0.5f, transform.forward, out hit, transform.rotation, pickupDist, layerMask))
-        //if (handsEmpty && Physics.Raycast(raycastOrigin.position, transform.TransformDirection(Vector3.forward), out hit, pickupDist/*, layerMask*/))
+        foreach (float angle in raycastAngles)
         {
-            Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            if (raycastHitObj != null && raycastHitObj != hit.transform.gameObject)
+            if (Physics.Raycast(transform.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection, out hit, pickupDist, layerMask))
             {
-                raycastHitObj.GetComponent<ChildAnimationController>().SetSelected(false);
+                if (hit.distance < closestDistanceTemp)
+                {
+                    closestDistanceTemp = hit.distance;
+                    closestChildTemp = hit.transform.gameObject;
+                }
+                Debug.DrawRay(transform.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection * hit.distance, Color.red);
             }
-            raycastHitObj = hit.transform.gameObject;
-            raycastHitObj.GetComponent<ChildAnimationController>().SetSelected(true);
+            else
+            {
+                Debug.DrawRay(transform.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection * pickupDist, Color.white);
+            }
+        }
+
+        if (closestChildTemp != null)
+        {
+            if (closestChild != null && closestChild != closestChildTemp)
+            {
+                closestChild.GetComponent<ChildAnimationController>().SetSelected(false);
+            }
+            closestChild = closestChildTemp;
+            closestChild.GetComponent<ChildAnimationController>().SetSelected(true);
         }
         else
         {
-            Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
-            if (raycastHitObj != null)
+            if (closestChild != null)
             {
-                raycastHitObj.GetComponent<ChildAnimationController>().SetSelected(false);
-                raycastHitObj = null;
+                closestChild.GetComponent<ChildAnimationController>().SetSelected(false);
+                closestChild = null;
             }
         }
     }
 
     void Update()
     {
-        velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0f, Input.GetAxis("Vertical") * moveSpeed);
-        Vector3 lookDirection = transform.position + velocity;
+        vel = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        if (vel.sqrMagnitude > 1.0f) vel.Normalize();
+
+        if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
+        {
+            lastVelocityDirection = vel.normalized;
+        }
+        Vector3 lookDirection = transform.position + vel;
         lookDirection.z = transform.position.z;
         transform.LookAt(lookDirection);
-        transform.position += velocity * Time.deltaTime;
+        transform.position += vel * moveSpeed * Time.deltaTime;
 
-        if (handsEmpty) PerformRaycast();
+        if (handsEmpty) PerformRaycasts();
+        Debug.Log("raycasting with: " + closestChild);
 
         if (Input.GetKeyDown(KeyCode.Space)) Debug.Log("Space pressed");
 
-        if (handsEmpty && raycastHitObj != null && Input.GetKeyDown(KeyCode.Space))
+        if (handsEmpty && closestChild != null && Input.GetKeyDown(KeyCode.Space))
         {
             handsEmpty = false;
-            heldObj = raycastHitObj;
+            heldObj = closestChild;
             heldObj.GetComponent<ChildAnimationController>().SetSelected(false);
+            heldObj.GetComponent<Rigidbody>().isKinematic = false;
+            heldObj.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
             heldObj.transform.parent = transform;
             heldObj.transform.position = pickupPosition.position;
             heldObj.GetComponent<Rigidbody>().useGravity = false;
-            raycastHitObj = null;
+            closestChild = null;
         }
         else if (!handsEmpty && heldObj != null && Input.GetKeyDown(KeyCode.Space))
         {
@@ -90,10 +115,5 @@ public class PlayerController : MonoBehaviour
             heldObj.GetComponent<Rigidbody>().AddTorque(transform.right * spin, ForceMode.Impulse);
             heldObj = null;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
     }
 }
