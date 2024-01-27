@@ -47,9 +47,6 @@ TagManager:
   - name: people
     uniqueID: 430504529
     locked: 0
-  - name: clothing
-    uniqueID: 968331365
-    locked: 0
   - name: foreground
     uniqueID: 2693645965
     locked: 0

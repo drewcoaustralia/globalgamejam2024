@@ -50,6 +50,14 @@ public class ChildAnimationController : MonoBehaviour
             clothesTrunksRend.color = new Color(clothesTrunksRend.color.r, clothesTrunksRend.color.g, clothesTrunksRend.color.b, 1f);
         }
     }
+
+    void StartAnimating(bool start = true)
+    {
+        skinAnim.enabled = start;
+        clothesTrunksAnim.enabled = start;
+        clothesOnePieceAnim.enabled = start;
+    }
+
     void Start()
     {
         InitialSetup();
@@ -59,5 +67,6 @@ public class ChildAnimationController : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) RandomizeCosmetics(true);
+        if (Input.GetKeyDown(KeyCode.P)) StartAnimating(true);
     }
 }
