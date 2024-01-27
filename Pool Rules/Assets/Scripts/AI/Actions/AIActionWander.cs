@@ -4,17 +4,18 @@ using UnityEngine.TestTools;
 
 public class AIActionWander : AIAction
 {
-    [SerializeField] private NavMeshAgent childsNavMeshAgent;
+    [SerializeField] private NavMeshAgent childNavMeshAgent;
     [SerializeField] private float moveRange = 10f;
 
     private void Awake()
     {
-        if (childsNavMeshAgent == null) Debug.LogWarning("childsNavMeshAgent is null");
+        if (childNavMeshAgent == null) childNavMeshAgent = GetComponentInParent<NavMeshAgent>();
+        if (childNavMeshAgent == null) Debug.LogWarning("childNavMeshAgent is null");
     }
 
     public override void PerformAction()
     {
-        if (!childsNavMeshAgent.pathPending && childsNavMeshAgent.remainingDistance < 0.1f)
+        if (!childNavMeshAgent.pathPending && childNavMeshAgent.remainingDistance < 0.1f)
         {
             MoveToRandomTarget();
         }
@@ -26,6 +27,6 @@ public class AIActionWander : AIAction
         randomDirection += transform.position;
         NavMeshHit hit;
         NavMesh.SamplePosition(randomDirection, out hit, moveRange, NavMesh.AllAreas);
-        childsNavMeshAgent.SetDestination(hit.position);
+        childNavMeshAgent.SetDestination(hit.position);
     }
 }

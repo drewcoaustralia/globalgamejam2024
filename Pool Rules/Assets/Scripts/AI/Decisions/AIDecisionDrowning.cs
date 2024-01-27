@@ -11,7 +11,8 @@ public class AIDecisionDrowning : AIDecision
 
     private void Awake()
     {
-        if (childRuleStates == null) Debug.LogWarning("child is null");
+        if (childRuleStates == null) childRuleStates = GetComponentInParent<ChildRuleStates>();
+        if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
     }
 
     public override bool Decide()

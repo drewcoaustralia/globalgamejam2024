@@ -10,7 +10,8 @@ public class AIDecisionRunning : AIDecision
 
     private void Awake()
     {
-        if (childRuleStates == null) Debug.LogWarning("ChildRuleStates is null");
+        if (childRuleStates == null) childRuleStates = GetComponentInParent<ChildRuleStates>();
+        if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
     }
 
     public override bool Decide()

@@ -17,6 +17,5 @@ public abstract class AIAction : MonoBehaviour
 
     public virtual void OnExitState()
     {
-        if (logStateChange) Debug.Log($"transitioned from {GetType().Name}.");
     }
 }
