@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AIActionDrowning : AIAction
 {
-    [SerializeField] private Child child;
+    [SerializeField] private ChildRuleStates childRuleStates;
 
     private void Awake()
     {
-        if (child == null) Debug.LogWarning("child is null");
+        if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
     }
 
     public override void PerformAction()
     {
-        child.IsDrowning = true;
+        childRuleStates.IsDrowning = true;
     }
 }

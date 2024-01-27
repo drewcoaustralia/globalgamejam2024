@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class AIDecisionDrowning : AIDecision
 {
-    [SerializeField] private Child child;
+    [SerializeField] private ChildRuleStates childRuleStates;
     [SerializeField] private int totalChance = 100;
     [SerializeField] private int odds = 1;
     [SerializeField] private bool logDiceRolls = false;
 
     private void Awake()
     {
-        if (child == null) Debug.LogWarning("child is null");
+        if (childRuleStates == null) Debug.LogWarning("child is null");
     }
 
     public override bool Decide()
     {
-        if (child.IsSwimming)
+        if (childRuleStates.IsSwimming)
         {
             return EvaluateOdds();
         }

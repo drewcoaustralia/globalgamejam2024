@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b051eb18becc9fa44a73d324f274aa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 453979999166173449}
+  childRuleStates: {fileID: 453979999166173449}
   totalChance: 100
   odds: 1
   logDiceRolls: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logStateChange: 0
-  child: {fileID: 453979999166173449}
+  childRuleStates: {fileID: 453979999166173449}
 --- !u!1 &3570871317627859282
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 3744385410878578687}
   - component: {fileID: 7633378715425432524}
   - component: {fileID: 453979999166173449}
+  - component: {fileID: 5510404072129409363}
   - component: {fileID: 1213593731394119417}
   - component: {fileID: 8343522922593103277}
   - component: {fileID: 706936001530146138}
@@ -639,6 +640,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5510404072129409363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250621930509581270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187c7e81870a1e4499f081156895a40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeedThreshold: 5
 --- !u!114 &1213593731394119417
 MonoBehaviour:
   m_ObjectHideFlags: 0
