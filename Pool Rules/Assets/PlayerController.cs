@@ -80,7 +80,6 @@ public class PlayerController : MonoBehaviour
             handsEmpty = true;
             heldObj.transform.parent = null;
             heldObj.GetComponent<Rigidbody>().useGravity = true;
-
             Vector3 throwForce = throwPower * (Quaternion.AngleAxis(throwAngle, transform.TransformDirection(Vector3.right)) * transform.TransformDirection(Vector3.forward));
             Debug.Log(throwForce);
             heldObj.GetComponent<Rigidbody>().AddForce(throwForce,ForceMode.Impulse);
