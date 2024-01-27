@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logStateChange: 0
+  child: {fileID: 453979999166173449}
 --- !u!1 &3570871317627859282
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +437,7 @@ GameObject:
   - component: {fileID: 453979999166173449}
   - component: {fileID: 1213593731394119417}
   - component: {fileID: 8343522922593103277}
+  - component: {fileID: 706936001530146138}
   m_Layer: 0
   m_Name: Child
   m_TagString: Untagged
@@ -607,6 +609,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ef2619899e34446bd958b3fe4f88b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onRuleBroken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706936001530146138}
+        m_TargetAssemblyTypeName: AlbedoChanger, Assembly-CSharp
+        m_MethodName: ChangeAlbedoColorToRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRuleNoLongerBroken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706936001530146138}
+        m_TargetAssemblyTypeName: AlbedoChanger, Assembly-CSharp
+        m_MethodName: ResetAlbedoColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1213593731394119417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,5 +697,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b6fd1719c4812b4e8384de8f3839c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &706936001530146138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250621930509581270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffc5d8addb94e54cb438c077e2da19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
