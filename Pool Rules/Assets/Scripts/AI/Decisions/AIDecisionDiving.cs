@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIDecisionRunning : AIDecision
+public class AIDecisionDiving : AIDecision
 {
     [SerializeField] private ChildRuleStates childRuleStates;
-    [SerializeField] private int totalChance = 25;
+    [SerializeField] private int totalChance = 50;
     [SerializeField] private int odds = 1;
 
     private void Awake()
@@ -25,5 +25,5 @@ public class AIDecisionRunning : AIDecision
         int dice = Maths.RollADice(totalChance);
         bool result = (dice <= odds);
         return result;
-    } 
+    }
 }

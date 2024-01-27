@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIActionDrowning : AIAction
+public class AIDecisionSwimming : AIDecision
 {
     [SerializeField] private ChildRuleStates childRuleStates;
 
@@ -12,8 +12,9 @@ public class AIActionDrowning : AIAction
         if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
     }
 
-    public override void PerformAction()
+    public override bool Decide()
     {
-        childRuleStates.IsDrowning = true;
+        if (childRuleStates.IsSwimming) return true;
+        else return false;
     }
 }
