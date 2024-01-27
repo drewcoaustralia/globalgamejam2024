@@ -19,6 +19,8 @@ public class ChildAnimationController : MonoBehaviour
     private SpriteRenderer clothesOnePieceRend;
     private Animator clothesOnePieceAnim;
 
+    [SerializeField] private Color tempColor;
+
     void InitialSetup()
     {
         skinRend = skin.GetComponent<SpriteRenderer>();
@@ -36,6 +38,7 @@ public class ChildAnimationController : MonoBehaviour
     void RandomizeCosmetics(bool randomizeSkin = false)
     {
         if (randomizeSkin) skinRend.color = skinColors[Random.Range(0, skinColors.Count)];
+        tempColor = skinRend.color;
         clothesTrunksRend.color = clothesColors[Random.Range(0, skinColors.Count)];
         clothesOnePieceRend.color = clothesColors[Random.Range(0, skinColors.Count)];
 
@@ -56,6 +59,20 @@ public class ChildAnimationController : MonoBehaviour
         skinAnim.enabled = start;
         clothesTrunksAnim.enabled = start;
         clothesOnePieceAnim.enabled = start;
+    }
+
+    public void SetSelected(bool selected = true)
+    {
+        Debug.Log("Selected: " + selected);
+        if (selected)
+        {
+            if (skinRend.color != Color.magenta) tempColor = skinRend.color;
+            skinRend.color = Color.magenta;
+        }
+        else
+        {
+            skinRend.color = tempColor;
+        }
     }
 
     void Start()

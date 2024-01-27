@@ -39,17 +39,17 @@ public class PlayerController : MonoBehaviour
             Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             if (raycastHitObj != null && raycastHitObj != hit.transform.gameObject)
             {
-                raycastHitObj.GetComponent<ChildController>().SetSelected(false);
+                raycastHitObj.GetComponentInParent<ChildAnimationController>().SetSelected(false);
             }
             raycastHitObj = hit.transform.gameObject;
-            raycastHitObj.GetComponent<ChildController>().SetSelected(true);
+            raycastHitObj.GetComponentInParent<ChildAnimationController>().SetSelected(true);
         }
         else
         {
             Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
             if (raycastHitObj != null)
             {
-                raycastHitObj.GetComponent<ChildController>().SetSelected(false);
+                raycastHitObj.GetComponentInParent<ChildAnimationController>().SetSelected(false);
                 raycastHitObj = null;
             }
         }
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             handsEmpty = false;
             heldObj = raycastHitObj;
-            heldObj.GetComponent<ChildController>().SetSelected(false);
+            heldObj.GetComponentInParent<ChildAnimationController>().SetSelected(false);
             heldObj.transform.parent = transform;
             heldObj.transform.position = pickupPosition.position;
             heldObj.GetComponent<Rigidbody>().useGravity = false;
