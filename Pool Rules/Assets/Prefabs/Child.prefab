@@ -1238,7 +1238,7 @@ MonoBehaviour:
   clothesTrunksBack: {fileID: 8455711421719906331}
   clothesOnePieceFront: {fileID: 5879751241662756189}
   clothesOnePieceBack: {fileID: 1753649743253865100}
-  tempColor: {r: 0, g: 0, b: 0, a: 0}
+  throwSound: {fileID: 8300000, guid: 8ba20b332ef535a48984465744032c44, type: 3}
 --- !u!1 &6435891871434821829
 GameObject:
   m_ObjectHideFlags: 0

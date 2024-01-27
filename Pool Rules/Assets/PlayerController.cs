@@ -24,12 +24,8 @@ public class PlayerController : MonoBehaviour
 
     void PerformRaycast()
     {
-        // Bit shift the index of the layer (8) to get a bit mask
-        int layerMask = 1 << 6;
-
-        // This would cast rays only against colliders in layer 8.
-        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-        layerMask = ~layerMask;
+        // Bit shift the index of the layer (7) to get a bit mask
+        int layerMask = 1 << 7;
 
         RaycastHit hit;
 
@@ -64,6 +60,7 @@ public class PlayerController : MonoBehaviour
         transform.position += velocity * Time.deltaTime;
 
         if (handsEmpty) PerformRaycast();
+        Debug.Log("raycasting with: " + raycastHitObj);
 
         if (Input.GetKeyDown(KeyCode.Space)) Debug.Log("Space pressed");
 
@@ -72,6 +69,7 @@ public class PlayerController : MonoBehaviour
             handsEmpty = false;
             heldObj = raycastHitObj;
             heldObj.GetComponent<ChildAnimationController>().SetSelected(false);
+            heldObj.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled =false;
             heldObj.transform.parent = transform;
             heldObj.transform.position = pickupPosition.position;
             heldObj.GetComponent<Rigidbody>().useGravity = false;
