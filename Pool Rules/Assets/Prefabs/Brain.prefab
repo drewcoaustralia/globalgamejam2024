@@ -66,6 +66,9 @@ MonoBehaviour:
     - Decision: {fileID: 752699322434660660}
       TrueState: Flipping
       FalseState: 
+    - Decision: {fileID: 1053986886129474929}
+      TrueState: Eating
+      FalseState: 
   - StateName: Wandering
     Actions:
     - {fileID: 8071993729767563572}
@@ -110,6 +113,13 @@ MonoBehaviour:
     Transitions:
     - Decision: {fileID: 1559513997064916786}
       TrueState: Swimming
+      FalseState: 
+  - StateName: Eating
+    Actions:
+    - {fileID: 2087853880387417713}
+    Transitions:
+    - Decision: {fileID: 4880717326262423897}
+      TrueState: Idle
       FalseState: 
   ActionsFrequency: 1
   DecisionFrequency: 0.1
@@ -204,8 +214,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logStateChange: 1
-  childsNavMeshAgent: {fileID: 0}
+  childNavMeshAgent: {fileID: 0}
   moveRange: 10
+--- !u!1 &1442923527396027454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3084869159083944282}
+  - component: {fileID: 4880717326262423897}
+  m_Layer: 7
+  m_Name: EndEating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3084869159083944282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442923527396027454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5724771594168395576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4880717326262423897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442923527396027454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a906a6bcb5c78f74c9928f75b6c6f933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2153378497901291874
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,10 +400,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logStateChange: 1
   childRuleStates: {fileID: 0}
-  childsNavMeshAgent: {fileID: 0}
+  childNavMeshAgent: {fileID: 0}
   swimmingSpeed: 2
   swimmingBaseOffset: 0.3
   moveRange: 10
+--- !u!1 &3712399101737407130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 810890089977887002}
+  - component: {fileID: 1053986886129474929}
+  m_Layer: 7
+  m_Name: StartEating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &810890089977887002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712399101737407130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5724771594168395576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1053986886129474929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712399101737407130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d510393d701af8a4390898691292d79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalChance: 1000
+  odds: 1
 --- !u!1 &4211836975526865092
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logStateChange: 1
   childRuleStates: {fileID: 0}
-  childsNavMeshAgent: {fileID: 0}
+  childNavMeshAgent: {fileID: 0}
   runningSpeed: 10
   moveRange: 10
 --- !u!1 &5031038508897208738
@@ -538,6 +638,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a906a6bcb5c78f74c9928f75b6c6f933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6854314905297708562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6915259065351937997}
+  - component: {fileID: 2087853880387417713}
+  m_Layer: 7
+  m_Name: Eating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6915259065351937997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854314905297708562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6002079871833843843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087853880387417713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854314905297708562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bda94c3eddec04ea66b270d459ec4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logStateChange: 1
+  childRuleStates: {fileID: 0}
+  aiDecisionTriggered: {fileID: 4880717326262423897}
+  waitTime: 10
 --- !u!1 &7210192049296685498
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +815,8 @@ Transform:
   - {fileID: 6624502167698362279}
   - {fileID: 6539437341916520333}
   - {fileID: 5865333827292390811}
+  - {fileID: 810890089977887002}
+  - {fileID: 3084869159083944282}
   m_Father: {fileID: 7209993043836213898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7709270322476137374
@@ -935,6 +1085,7 @@ Transform:
   - {fileID: 8265450202144486008}
   - {fileID: 3490830386216430241}
   - {fileID: 4037920380408188820}
+  - {fileID: 6915259065351937997}
   m_Father: {fileID: 7209993043836213898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9141637493617504378

@@ -931,10 +931,10 @@ PrefabInstance:
       propertyPath: childNavMeshAgent
       value: 
       objectReference: {fileID: 3744385410878578687}
-    - target: {fileID: 1468218293473045665, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: childsNavMeshAgent
+    - target: {fileID: 2087853880387417713, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
+      propertyPath: childRuleStates
       value: 
-      objectReference: {fileID: 3744385410878578687}
+      objectReference: {fileID: 453979999166173449}
     - target: {fileID: 3513831884378533684, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childRuleStates
       value: 
@@ -945,10 +945,6 @@ PrefabInstance:
       objectReference: {fileID: 453979999166173449}
     - target: {fileID: 3598559851593874272, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childNavMeshAgent
-      value: 
-      objectReference: {fileID: 3744385410878578687}
-    - target: {fileID: 3598559851593874272, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: childsNavMeshAgent
       value: 
       objectReference: {fileID: 3744385410878578687}
     - target: {fileID: 3922330420664364899, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
@@ -1005,10 +1001,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071993729767563572, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childNavMeshAgent
-      value: 
-      objectReference: {fileID: 3744385410878578687}
-    - target: {fileID: 8071993729767563572, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: childsNavMeshAgent
       value: 
       objectReference: {fileID: 3744385410878578687}
     - target: {fileID: 8630365404809899645, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
