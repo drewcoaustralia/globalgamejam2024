@@ -13,7 +13,7 @@ public class ChildManager : MonoBehaviour
     void Start()
     {
         ResetSpawnTimer();
-        Spawn(3);
+        Spawn();
     }
 
     void ResetSpawnTimer()
@@ -21,8 +21,9 @@ public class ChildManager : MonoBehaviour
         childSpawnNextTime = Time.time + Random.Range(childSpawnDelayMin, childSpawnDelayMax);
     }
 
-    void Spawn(int num = 1)
+    void Spawn(int num = -1)
     {
+        if (num == -1) num = Random.Range(1, childSpawnCountMax + 1);
         for (int i=0; i<num; i++)
         {
             Vector3 position = new Vector3(Random.Range(-5f, 5f), 1f, Random.Range(-5f, 5f));
@@ -33,6 +34,6 @@ public class ChildManager : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= childSpawnNextTime || Input.GetKeyDown(KeyCode.Backspace)) Spawn(Random.Range(1, childSpawnCountMax+1));
+        if (Time.time >= childSpawnNextTime || Input.GetKeyDown(KeyCode.Backspace)) Spawn();
     }
 }
