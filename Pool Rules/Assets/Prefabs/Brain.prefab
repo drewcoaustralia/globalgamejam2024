@@ -63,6 +63,9 @@ MonoBehaviour:
     - Decision: {fileID: 123006969716326766}
       TrueState: Diving
       FalseState: 
+    - Decision: {fileID: 752699322434660660}
+      TrueState: Flipping
+      FalseState: 
   - StateName: Wandering
     Actions:
     - {fileID: 8071993729767563572}
@@ -92,7 +95,7 @@ MonoBehaviour:
     - {fileID: 8879582884487995687}
     Transitions:
     - Decision: {fileID: 1618041434501086746}
-      TrueState: Idle
+      TrueState: Swimming
       FalseState: 
   - StateName: Swimming
     Actions:
@@ -101,6 +104,13 @@ MonoBehaviour:
     - Decision: {fileID: 9037931920541149747}
       TrueState: 
       FalseState: Wandering
+  - StateName: Flipping
+    Actions:
+    - {fileID: 6244389035557437825}
+    Transitions:
+    - Decision: {fileID: 1559513997064916786}
+      TrueState: Swimming
+      FalseState: 
   ActionsFrequency: 1
   DecisionFrequency: 0.1
 --- !u!1 &540770998495738437
@@ -242,6 +252,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
   totalChance: 250
+  odds: 1
+--- !u!1 &3123881156149206348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6539437341916520333}
+  - component: {fileID: 752699322434660660}
+  m_Layer: 7
+  m_Name: StartFlipping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6539437341916520333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123881156149206348}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5724771594168395576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752699322434660660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123881156149206348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1156996c02f39b04f9880062062c932e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childRuleStates: {fileID: 0}
+  totalChance: 50
   odds: 1
 --- !u!1 &3472887007997786406
 GameObject:
@@ -389,6 +446,54 @@ MonoBehaviour:
   childRuleStates: {fileID: 0}
   totalChance: 500
   odds: 1
+--- !u!1 &5464416736663994920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4037920380408188820}
+  - component: {fileID: 6244389035557437825}
+  m_Layer: 7
+  m_Name: Flipping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4037920380408188820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464416736663994920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6002079871833843843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6244389035557437825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464416736663994920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88490d50009423c45910fcaf92bcc782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logStateChange: 1
+  childRuleStates: {fileID: 0}
+  childNavMeshAgent: {fileID: 0}
+  aiDecisionTriggered: {fileID: 1559513997064916786}
 --- !u!1 &6599566436232330183
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +584,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalChance: 150
   odds: 1
+--- !u!1 &7459744334046087480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5865333827292390811}
+  - component: {fileID: 1559513997064916786}
+  m_Layer: 7
+  m_Name: EndFlipping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5865333827292390811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459744334046087480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5724771594168395576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559513997064916786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459744334046087480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a906a6bcb5c78f74c9928f75b6c6f933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7519654989907856960
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +665,8 @@ Transform:
   - {fileID: 2872061157938177505}
   - {fileID: 5204268642132137429}
   - {fileID: 6624502167698362279}
+  - {fileID: 6539437341916520333}
+  - {fileID: 5865333827292390811}
   m_Father: {fileID: 7209993043836213898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7709270322476137374
@@ -783,6 +934,7 @@ Transform:
   - {fileID: 4642458412720462126}
   - {fileID: 8265450202144486008}
   - {fileID: 3490830386216430241}
+  - {fileID: 4037920380408188820}
   m_Father: {fileID: 7209993043836213898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9141637493617504378
