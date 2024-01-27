@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Children
+  - Environment
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2084369049
+    locked: 0
+  - name: people
+    uniqueID: 430504529
+    locked: 0
+  - name: foreground
+    uniqueID: 2693645965
     locked: 0
