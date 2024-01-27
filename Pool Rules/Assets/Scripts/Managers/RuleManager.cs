@@ -11,9 +11,14 @@ public class RuleManager : Singleton<RuleManager>
     [SerializeField] private bool logRuleChanges;
 
     private Dictionary<string, bool> rules = new Dictionary<string, bool>();
+    private Dictionary<string, int> rulesTextIndexes = new Dictionary<string, int>();
 
-    public TextMeshProUGUI signLeft;
-    public TextMeshProUGUI signRight;
+    private RuleSignManager _ruleSignManager;
+
+    private void Start()
+    {
+        _ruleSignManager = GetComponent<RuleSignManager>();
+    }
 
     public void SetRule(string ruleName, bool isActive)
     {
@@ -23,7 +28,14 @@ public class RuleManager : Singleton<RuleManager>
             RuleChanged?.Invoke(ruleName, isActive);
             if (logRuleChanges) Debug.Log($"{ruleName} set to {isActive}");
             // do UI stuff here
-            signLeft.text += "\n-" + ruleName;
+            if (isActive)
+            {
+                rulesTextIndexes.Add(ruleName, _ruleSignManager.AddRule(ruleName));
+            }
+            else
+            {
+                _ruleSignManager.RemoveRule(rulesTextIndexes[ruleName]);
+            }
         }
     }
 

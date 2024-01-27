@@ -325,9 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childPrefab: {fileID: 6250621930509581270, guid: 8f09b6ded272e0540a17b77b848d7b0b, type: 3}
-  childSpawnDelayMin: 9999
-  childSpawnDelayMax: 99999
-  childSpawnCountMax: 1
+  childSpawnDelayMin: 3
+  childSpawnDelayMax: 6
+  childSpawnCountMax: 2
 --- !u!1 &354403103
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +753,7 @@ GameObject:
   - component: {fileID: 977006422}
   - component: {fileID: 977006421}
   - component: {fileID: 977006423}
+  - component: {fileID: 977006424}
   m_Layer: 0
   m_Name: Rule Manager
   m_TagString: Untagged
@@ -801,8 +802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logRuleChanges: 0
-  signLeft: {fileID: 2093417013}
-  signRight: {fileID: 60869396}
 --- !u!114 &977006423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +818,20 @@ MonoBehaviour:
   - ruleName: NoSwimming
     changeTime: 3
     newState: 1
+--- !u!114 &977006424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977006419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55ffa6f562269d4d8c21b18766ad187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signLeft: {fileID: 2093417013}
+  signRight: {fileID: 60869396}
 --- !u!1 &977029868
 GameObject:
   m_ObjectHideFlags: 0
