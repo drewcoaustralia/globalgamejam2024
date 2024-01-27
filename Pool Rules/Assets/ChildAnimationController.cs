@@ -54,7 +54,7 @@ public class ChildAnimationController : MonoBehaviour
         }
     }
 
-    void StartAnimating(bool start = true)
+    public void StartAnimating(bool start = true)
     {
         skinAnim.enabled = start;
         clothesTrunksAnim.enabled = start;
@@ -63,7 +63,6 @@ public class ChildAnimationController : MonoBehaviour
 
     public void SetSelected(bool selected = true)
     {
-        Debug.Log("Selected: " + selected);
         if (selected)
         {
             if (skinRend.color != Color.magenta) tempColor = skinRend.color;
