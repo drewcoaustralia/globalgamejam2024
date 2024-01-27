@@ -2,50 +2,90 @@ using UnityEngine;
 
 public class RuleToggleGUI : MonoBehaviour
 {
-    private RuleManager ruleManager;
-    private bool noSwimming;
-    private bool noRunning;
-    private bool noDrowning;
-    private bool noFlips;
-    private bool noFoodOrDrink;
-    private bool noSmiling;
-    private bool noDiving;
-    private bool noWalking;
+    [SerializeField]
+    private bool isGUIToggled = true;
+
+    private RuleManager _ruleManager;
+    private bool[] rules;
+    private string[] ruleNames;
+
+    private int buttonsPerColumn = 10;
+    private float buttonWidth = 200;
+    private float buttonHeight = 50;
+    private float buttonSpacing = 10;
+    private Vector2 scrollPosition = Vector2.zero;
 
     private void Start()
     {
-        ruleManager = RuleManager.Instance;
-        noSwimming = ruleManager.GetRule("NoSwimming");
-        noRunning = ruleManager.GetRule("NoRunning");
-        noDrowning = ruleManager.GetRule("NoDrowning");
-        noFlips = ruleManager.GetRule("NoFlips");
-        noFoodOrDrink = ruleManager.GetRule("NoFoodOrDrink");
-        noSmiling = ruleManager.GetRule("NoSmiling");
-        noDiving = ruleManager.GetRule("NoDiving");
-        noWalking = ruleManager.GetRule("NoWalking");
+        _ruleManager = RuleManager.Instance;
+        InitializeRules();
+    }
+
+    private void InitializeRules()
+    {
+        ruleNames = new string[]
+        {
+            "NoSwimming", "NoRunning", "NoDrowning", "NoFlips", "NoFoodOrDrink",
+            "NoSmiling", "NoDiving", "NoWalking", "NoPhones", "NoFlipPhone",
+            "NoFlipFlops", "NoFerret", "NoTrenchcoat", "NoPrimeMinister", "NoSwearing",
+            "NoBackstroking", "NoScubaGear", "NoAlien", "NoGinger", "NoSmoking",
+            "NoVaping", "NoBeard", "NoStreaking", "NoDaydreaming", "NoNoodle",
+            "NoParking", "NoTowel", "NoContemplatingTheMeaningOfLife", "NoUrinating",
+            "NoCooking", "NoOverthrowingGovernment", "NoBoombox", "NoBeatboxing",
+            "NoBoxing", "NoToaster", "NoFishing", "NoLaughing", "NoLittering",
+            "NoFighting", "NoBike", "NoScooter", "NoSkateboard", "NoBallGame"
+        };
+
+        int numberOfRules = ruleNames.Length;
+        rules = new bool[numberOfRules];
+
+        for (int i = 0; i < numberOfRules; i++)
+        {
+            rules[i] = _ruleManager.GetRule(ruleNames[i]);
+        }
     }
 
     private void OnGUI()
     {
-        noSwimming = ToggleRule("NoSwimming", noSwimming, new Vector2(20, 20));
-        noRunning = ToggleRule("NoRunning", noRunning, new Vector2(20, 80));
-        noDrowning = ToggleRule("NoDrowning", noDrowning, new Vector2(20, 140));
-        noFlips = ToggleRule("NoFlips", noFlips, new Vector2(20, 200));
-        noFoodOrDrink = ToggleRule("NoFoodOrDrink", noFoodOrDrink, new Vector2(20, 260));
-        noSmiling = ToggleRule("NoSmiling", noSmiling, new Vector2(20, 320));
-        noDiving = ToggleRule("NoDiving", noDiving, new Vector2(20, 380));
-        noWalking = ToggleRule("NoWalking", noWalking, new Vector2(20, 440));
+        if (!isGUIToggled) return;
+
+        int numberOfColumns = Mathf.CeilToInt((float)rules.Length / buttonsPerColumn);
+        float totalWidth = buttonWidth + buttonSpacing;
+        float totalHeight = (buttonHeight + buttonSpacing) * numberOfColumns;
+
+        scrollPosition = GUI.BeginScrollView(new Rect(20, 20, Screen.width - 40, Screen.height - 40), scrollPosition, new Rect(0, 0, totalWidth, totalHeight));
+
+        int buttonIndex = 0;
+
+        for (int col = 0; col < numberOfColumns; col++)
+        {
+            for (int row = 0; row < buttonsPerColumn; row++)
+            {
+                if (buttonIndex >= rules.Length)
+                {
+                    break;
+                }
+
+                float x = col * (buttonWidth + buttonSpacing);
+                float y = row * (buttonHeight + buttonSpacing);
+
+                rules[buttonIndex] = ToggleRule(ruleNames[buttonIndex], rules[buttonIndex], new Vector2(x, y));
+                buttonIndex++;
+            }
+        }
+
+        GUI.EndScrollView();
     }
 
     private bool ToggleRule(string ruleName, bool ruleValue, Vector2 position)
     {
-        if (GUI.Button(new Rect(position.x, position.y, 200, 50), "Toggle " + ruleName))
+        if (GUI.Button(new Rect(position.x, position.y, buttonWidth, buttonHeight), "Toggle " + ruleName))
         {
             ruleValue = !ruleValue;
-            ruleManager.SetRule(ruleName, ruleValue);
+            _ruleManager.SetRule(ruleName, ruleValue);
         }
 
-        GUI.Label(new Rect(position.x + 210, position.y, 200, 50), ruleName + " is " + (ruleValue ? "ON" : "OFF"));
+        GUI.Label(new Rect(position.x + buttonWidth + buttonSpacing, position.y, buttonWidth, buttonHeight), ruleName + " is " + (ruleValue ? "ON" : "OFF"));
         return ruleValue;
     }
 }

@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2346125f00431e4e8d9d22828f774c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 1
+  logStateChange: 0
   childRuleStates: {fileID: 453979999166173449}
 --- !u!1 &3570871317627859282
 GameObject:
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a704075df79225949a332a1c5f0d9a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 1
+  logStateChange: 0
 --- !u!1 &4139013651419133492
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7e563b5f6e711428d153f651b59616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 1
+  logStateChange: 0
   childsNavMeshAgent: {fileID: 3744385410878578687}
   moveRange: 10
 --- !u!1 &6250621930509581270
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d27031982cee1c94187eb338fb202fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logStateChange: 1
+  logStateChange: 0
   childRuleStates: {fileID: 453979999166173449}
   childsNavMeshAgent: {fileID: 3744385410878578687}
   runningSpeed: 10
