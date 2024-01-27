@@ -5,8 +5,8 @@ using UnityEngine.TextCore.Text;
 
 public class AIDecisionRandom : AIDecision
 {
-    [SerializeField] private int TotalChance = 10;
-    [SerializeField] private int Odds = 4;
+    [SerializeField] private int totalChance = 10;
+    [SerializeField] private int odds = 4;
 
     public override bool Decide()
     {
@@ -15,8 +15,8 @@ public class AIDecisionRandom : AIDecision
 
     protected virtual bool EvaluateOdds()
     {
-        int dice = Maths.RollADice(TotalChance);
-        bool result = (dice <= Odds);
+        int dice = Maths.RollADice(totalChance);
+        bool result = (dice <= odds);
         return result;
     }
 }
