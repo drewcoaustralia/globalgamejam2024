@@ -11,13 +11,21 @@ public class ChildAnimationController : MonoBehaviour
     private SpriteRenderer skinRend;
     private Animator skinAnim;
 
-    public GameObject clothesTrunks;
-    private SpriteRenderer clothesTrunksRend;
-    private Animator clothesTrunksAnim;
+    public GameObject clothesTrunksFront;
+    private SpriteRenderer clothesTrunksRendFront;
+    private Animator clothesTrunksAnimFront;
 
-    public GameObject clothesOnePiece;
-    private SpriteRenderer clothesOnePieceRend;
-    private Animator clothesOnePieceAnim;
+    public GameObject clothesTrunksBack;
+    private SpriteRenderer clothesTrunksRendBack;
+    private Animator clothesTrunksAnimBack;
+
+    public GameObject clothesOnePieceFront;
+    private SpriteRenderer clothesOnePieceRendFront;
+    private Animator clothesOnePieceAnimFront;
+
+    public GameObject clothesOnePieceBack;
+    private SpriteRenderer clothesOnePieceRendBack;
+    private Animator clothesOnePieceAnimBack;
 
     [SerializeField] private Color tempColor;
 
@@ -26,11 +34,15 @@ public class ChildAnimationController : MonoBehaviour
         skinRend = skin.GetComponent<SpriteRenderer>();
         skinAnim = skin.GetComponent<Animator>();
 
-        clothesTrunksRend = clothesTrunks.GetComponent<SpriteRenderer>();
-        clothesTrunksAnim = clothesTrunks.GetComponent<Animator>();
+        clothesTrunksRendFront = clothesTrunksFront.GetComponent<SpriteRenderer>();
+        clothesTrunksAnimFront = clothesTrunksFront.GetComponent<Animator>();
+        clothesTrunksRendBack = clothesTrunksBack.GetComponent<SpriteRenderer>();
+        clothesTrunksAnimBack = clothesTrunksBack.GetComponent<Animator>();
 
-        clothesOnePieceRend = clothesOnePiece.GetComponent<SpriteRenderer>();
-        clothesOnePieceAnim = clothesOnePiece.GetComponent<Animator>();
+        clothesOnePieceRendFront = clothesOnePieceFront.GetComponent<SpriteRenderer>();
+        clothesOnePieceAnimFront = clothesOnePieceFront.GetComponent<Animator>();
+        clothesOnePieceRendBack = clothesOnePieceBack.GetComponent<SpriteRenderer>();
+        clothesOnePieceAnimBack = clothesOnePieceBack.GetComponent<Animator>();
 
         RandomizeCosmetics(true);
     }
@@ -39,26 +51,37 @@ public class ChildAnimationController : MonoBehaviour
     {
         if (randomizeSkin) skinRend.color = skinColors[Random.Range(0, skinColors.Count)];
         tempColor = skinRend.color;
-        clothesTrunksRend.color = clothesColors[Random.Range(0, skinColors.Count)];
-        clothesOnePieceRend.color = clothesColors[Random.Range(0, skinColors.Count)];
+        Color clothingColor = clothesColors[Random.Range(0, skinColors.Count)];
+        clothesTrunksRendFront.color = clothingColor;
+        clothesTrunksRendBack.color = clothingColor;
+        clothesOnePieceRendFront.color = clothingColor;
+        clothesOnePieceRendBack.color = clothingColor;
 
+        // turning renderer to transparent instead of turning off the clothing to not break animations
+        // just in case we want to swap clothes on same kid for some reason
         if (Random.value > 0.5)
         {
-            clothesTrunksRend.color = new Color(clothesTrunksRend.color.r, clothesTrunksRend.color.g, clothesTrunksRend.color.b, 0f);
-            clothesOnePieceRend.color = new Color(clothesTrunksRend.color.r, clothesTrunksRend.color.g, clothesTrunksRend.color.b, 1f);
+            clothesTrunksRendFront.color = new Color(clothesTrunksRendFront.color.r, clothesTrunksRendFront.color.g, clothesTrunksRendFront.color.b, 0f);
+            clothesTrunksRendBack.color = new Color(clothesTrunksRendBack.color.r, clothesTrunksRendBack.color.g, clothesTrunksRendBack.color.b, 0f);
+            clothesOnePieceRendFront.color = new Color(clothesTrunksRendFront.color.r, clothesTrunksRendFront.color.g, clothesTrunksRendFront.color.b, 1f);
+            clothesOnePieceRendBack.color = new Color(clothesTrunksRendBack.color.r, clothesTrunksRendBack.color.g, clothesTrunksRendBack.color.b, 1f);
         }
         else
         {
-            clothesOnePieceRend.color = new Color(clothesTrunksRend.color.r, clothesTrunksRend.color.g, clothesTrunksRend.color.b, 0f);
-            clothesTrunksRend.color = new Color(clothesTrunksRend.color.r, clothesTrunksRend.color.g, clothesTrunksRend.color.b, 1f);
+            clothesOnePieceRendFront.color = new Color(clothesTrunksRendFront.color.r, clothesTrunksRendFront.color.g, clothesTrunksRendFront.color.b, 0f);
+            clothesOnePieceRendBack.color = new Color(clothesTrunksRendBack.color.r, clothesTrunksRendBack.color.g, clothesTrunksRendBack.color.b, 0f);
+            clothesTrunksRendFront.color = new Color(clothesTrunksRendFront.color.r, clothesTrunksRendFront.color.g, clothesTrunksRendFront.color.b, 1f);
+            clothesTrunksRendBack.color = new Color(clothesTrunksRendBack.color.r, clothesTrunksRendBack.color.g, clothesTrunksRendBack.color.b, 1f);
         }
     }
 
     public void StartAnimating(bool start = true)
     {
         skinAnim.enabled = start;
-        clothesTrunksAnim.enabled = start;
-        clothesOnePieceAnim.enabled = start;
+        clothesTrunksAnimFront.enabled = start;
+        clothesTrunksAnimBack.enabled = start;
+        clothesOnePieceAnimFront.enabled = start;
+        clothesOnePieceAnimBack.enabled = start;
     }
 
     public void SetSelected(bool selected = true)
