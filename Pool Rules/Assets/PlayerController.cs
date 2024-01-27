@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float throwSpinMin = 30f;
     public float throwSpinMax = 90f;
     private Vector3 velocity = Vector2.zero;
-    public Transform raycastOrigin;
+    public BoxCollider boxcaster;
     public Transform pickupPosition;
     private GameObject raycastHitObj = null;
     private bool handsEmpty = true;
@@ -24,19 +24,19 @@ public class PlayerController : MonoBehaviour
 
     void PerformRaycast()
     {
-        /* 
         // Bit shift the index of the layer (8) to get a bit mask
-        int layerMask = 1 << 8;
+        int layerMask = 1 << 6;
 
         // This would cast rays only against colliders in layer 8.
         // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
         layerMask = ~layerMask;
-        */
 
         RaycastHit hit;
-        if (handsEmpty && Physics.Raycast(raycastOrigin.position, transform.TransformDirection(Vector3.forward), out hit, pickupDist/*, layerMask*/))
+
+        if (handsEmpty && Physics.BoxCast(boxcaster.bounds.center, boxcaster.transform.localScale * 0.5f, transform.forward, out hit, transform.rotation, pickupDist, layerMask))
+        //if (handsEmpty && Physics.Raycast(raycastOrigin.position, transform.TransformDirection(Vector3.forward), out hit, pickupDist/*, layerMask*/))
         {
-            Debug.DrawRay(raycastOrigin.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             if (raycastHitObj != null && raycastHitObj != hit.transform.gameObject)
             {
                 raycastHitObj.GetComponent<ChildController>().SetSelected(false);
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(raycastOrigin.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
+            Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
             if (raycastHitObj != null)
             {
                 raycastHitObj.GetComponent<ChildController>().SetSelected(false);
@@ -58,8 +58,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0f, Input.GetAxis("Vertical") * moveSpeed);
+        Vector3 lookDirection = transform.position + velocity;
+        lookDirection.z = transform.position.z;
+        transform.LookAt(lookDirection);
         transform.position += velocity * Time.deltaTime;
-        transform.LookAt(transform.position + velocity);
 
         if (handsEmpty) PerformRaycast();
 
@@ -91,6 +93,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Debug.DrawRay(raycastOrigin.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
+        Debug.DrawRay(boxcaster.transform.position, transform.TransformDirection(Vector3.forward) * pickupDist, Color.white);
     }
 }
