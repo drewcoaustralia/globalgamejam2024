@@ -15,6 +15,8 @@ public class AIActionDiving : AIAction
 
     private void Awake()
     {
+        if (childNavMeshAgent == null) childNavMeshAgent = GetComponentInParent<NavMeshAgent>();
+        if (childRuleStates == null) childRuleStates = GetComponentInParent<ChildRuleStates>();
         if (childNavMeshAgent == null) Debug.LogWarning("childNavMeshAgent is null");
         if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
         if (aiDecisionTriggered == null) Debug.LogWarning("aiDecisionTriggered is null");

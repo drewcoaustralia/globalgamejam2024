@@ -8,6 +8,7 @@ public class AIActionDrowning : AIAction
 
     private void Awake()
     {
+        if (childRuleStates == null) childRuleStates = GetComponentInParent<ChildRuleStates>();
         if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
     }
 

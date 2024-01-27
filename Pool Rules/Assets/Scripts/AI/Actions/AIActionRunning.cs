@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AIActionRunning : AIAction
 {
     [SerializeField] private ChildRuleStates childRuleStates;
-    [SerializeField] private NavMeshAgent childsNavMeshAgent;
+    [SerializeField] private NavMeshAgent childNavMeshAgent;
     [SerializeField] private float runningSpeed = 10f;
     [SerializeField] private float moveRange = 10f;
 
@@ -14,30 +14,32 @@ public class AIActionRunning : AIAction
 
     private void Awake()
     {
-        if (childRuleStates == null) Debug.LogWarning("childsRuleStates is null");
-        if (childsNavMeshAgent == null) Debug.LogWarning("navMeshAgent is null");
+        if (childNavMeshAgent == null) childNavMeshAgent = GetComponentInParent<NavMeshAgent>();
+        if (childNavMeshAgent == null) Debug.LogWarning("childNavMeshAgent is null");
+        if (childRuleStates == null) childRuleStates = GetComponentInParent<ChildRuleStates>();
+        if (childRuleStates == null) Debug.LogWarning("childRuleStates is null");
     }
 
     private void Start()
     {
-        originalSpeed = childsNavMeshAgent.speed;
+        originalSpeed = childNavMeshAgent.speed;
     }
 
     public override void OnEnterState()
     {
         base.OnEnterState();
-        childsNavMeshAgent.speed = runningSpeed;
+        childNavMeshAgent.speed = runningSpeed;
     }
 
     public override void OnExitState()
     {
         base.OnExitState();
-        childsNavMeshAgent.speed = originalSpeed;
+        childNavMeshAgent.speed = originalSpeed;
     }
 
     public override void PerformAction()
     {
-        if (!childsNavMeshAgent.pathPending && childsNavMeshAgent.remainingDistance < 0.1f)
+        if (!childNavMeshAgent.pathPending && childNavMeshAgent.remainingDistance < 0.1f)
         {
             MoveToRandomTarget();
         }
@@ -49,6 +51,6 @@ public class AIActionRunning : AIAction
         randomDirection += transform.position;
         NavMeshHit hit;
         NavMesh.SamplePosition(randomDirection, out hit, moveRange, NavMesh.AllAreas);
-        childsNavMeshAgent.SetDestination(hit.position);
+        childNavMeshAgent.SetDestination(hit.position);
     }
 }
