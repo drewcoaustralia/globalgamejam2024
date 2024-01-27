@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class RuleManager : Singleton<RuleManager>
 {
     public event Action<string, bool> RuleChanged;
+
+    [SerializeField] private bool logRuleChanges;
 
     private Dictionary<string, bool> rules = new Dictionary<string, bool>();
 
@@ -13,6 +16,7 @@ public class RuleManager : Singleton<RuleManager>
         {
             rules[ruleName] = isActive;
             RuleChanged?.Invoke(ruleName, isActive);
+            if (logRuleChanges) Debug.Log($"{ruleName} set to {isActive}");
         }
     }
 

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 977006420}
   - component: {fileID: 977006422}
   - component: {fileID: 977006421}
+  - component: {fileID: 977006423}
   m_Layer: 0
   m_Name: Rule Manager
   m_TagString: Untagged
@@ -168,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d69591d356932c4ba2a478f3271aa21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGUI: 0
 --- !u!114 &977006422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +182,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53392611f8c9564a8ce81434739e98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &977006423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977006419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09b31e3261811940881e22db7df7bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scheduledChanges:
+  - ruleName: NoSwimming
+    changeTime: 15
+    newState: 1
 --- !u!1 &977029868
 GameObject:
   m_ObjectHideFlags: 0

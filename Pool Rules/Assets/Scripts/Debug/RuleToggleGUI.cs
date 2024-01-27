@@ -3,7 +3,7 @@ using UnityEngine;
 public class RuleToggleGUI : MonoBehaviour
 {
     [SerializeField]
-    private bool isGUIToggled = true;
+    private bool showGUI = true;
 
     private RuleManager _ruleManager;
     private bool[] rules;
@@ -47,7 +47,7 @@ public class RuleToggleGUI : MonoBehaviour
 
     private void OnGUI()
     {
-        if (!isGUIToggled) return;
+        if (!showGUI) return;
 
         int numberOfColumns = Mathf.CeilToInt((float)rules.Length / buttonsPerColumn);
         float totalWidth = buttonWidth + buttonSpacing;
