@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RestartScene();
+            MainMenu();
         }
     }
 
