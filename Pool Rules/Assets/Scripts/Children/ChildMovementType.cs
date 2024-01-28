@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class ChildMovementType : MonoBehaviour
 {
     [SerializeField] private float movementSpeedThreshold = 5.0f;
+    private ChildAnimationController _animationController;
 
     private ChildRuleStates _childRuleStates;
     private NavMeshAgent _navMeshAgent;
@@ -14,6 +15,7 @@ public class ChildMovementType : MonoBehaviour
 
     private void Awake()
     {
+        _animationController = GetComponent<ChildAnimationController>();
         _childRuleStates = GetComponent<ChildRuleStates>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _originalSpeed = _navMeshAgent.speed;
@@ -25,17 +27,20 @@ public class ChildMovementType : MonoBehaviour
         {
             if (_navMeshAgent.speed <= movementSpeedThreshold)
             {
+                _animationController.SetAnimation("walking");
                 _childRuleStates.IsWalking = true;
                 _childRuleStates.IsRunning = false;
             }
             else
             {
+                _animationController.SetAnimation("running");
                 _childRuleStates.IsWalking = false;
                 _childRuleStates.IsRunning = true;
             }
         }
         else
         {
+            _animationController.SetAnimation("idle");
             _childRuleStates.IsWalking = false;
             _childRuleStates.IsRunning = false;
         }
