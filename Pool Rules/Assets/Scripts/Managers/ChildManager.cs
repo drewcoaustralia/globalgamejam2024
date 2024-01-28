@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChildManager : MonoBehaviour
 {
+    public GameObject spawnPoint;
+    private Vector3 spawnPosition;
     public GameObject childPrefab;
     public float childSpawnDelayMin = 4f;
     public float childSpawnDelayMax = 10f;
@@ -12,6 +14,7 @@ public class ChildManager : MonoBehaviour
 
     void Start()
     {
+        spawnPosition = spawnPoint.transform.position;
         ResetSpawnTimer();
         Spawn();
     }
@@ -26,8 +29,7 @@ public class ChildManager : MonoBehaviour
         if (num == -1) num = Random.Range(1, childSpawnCountMax + 1);
         for (int i=0; i<num; i++)
         {
-            Vector3 position = new Vector3(Random.Range(-5f, 5f), 1f, Random.Range(-5f, 5f));
-            GameObject.Instantiate(childPrefab, position, Quaternion.identity);
+            GameObject.Instantiate(childPrefab, spawnPosition, Quaternion.identity);
         }
         ResetSpawnTimer();
     }

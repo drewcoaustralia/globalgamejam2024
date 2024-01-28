@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence Segment (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.290007
@@ -237,6 +241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -298,6 +306,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (124)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -361,6 +373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -423,6 +439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -433,6 +453,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 43428782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &51175424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51175425}
+  - component: {fileID: 51175428}
+  - component: {fileID: 51175427}
+  - component: {fileID: 51175426}
+  m_Layer: 8
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51175425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51175424}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -38.37, y: 0.59, z: 21.92}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1072243423}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &51175426
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51175424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &51175427
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51175424}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &51175428
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51175424}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &60869396 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6417760857425781148, guid: cfa77c6ee4369a74c8534c1e7229e550, type: 3}
@@ -508,10 +633,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277638113}
   m_SourcePrefab: {fileID: 100100000, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
 --- !u!4 &66059545 stripped
 Transform:
@@ -569,6 +701,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (122)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -632,6 +768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (126)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -693,6 +833,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (136)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -756,6 +900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -817,6 +965,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -880,6 +1032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -941,6 +1097,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1004,6 +1164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1066,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (134)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1127,6 +1295,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1202,10 +1374,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1762788013}
   m_SourcePrefab: {fileID: 100100000, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
 --- !u!4 &186641317 stripped
 Transform:
@@ -1264,6 +1443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1283,7 +1466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 192369835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,6 +1545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1423,6 +1610,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1486,6 +1677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (103)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1547,6 +1742,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (138)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1610,6 +1809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1671,6 +1874,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1734,6 +1941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (142)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1796,6 +2007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1818,7 +2033,7 @@ GameObject:
   - component: {fileID: 234759426}
   - component: {fileID: 234759425}
   - component: {fileID: 234759424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1912,40 +2127,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234759422}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &236905664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 236905665}
-  m_Layer: 0
-  m_Name: Old
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &236905665
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236905664}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1558927837}
-  - {fileID: 1853127369}
-  - {fileID: 1660258721}
-  m_Father: {fileID: 1072243423}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &255857429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1997,6 +2178,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (107)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2052,6 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0e435c482b7f04295e5f0dc935d6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 51175424}
   childPrefab: {fileID: 6250621930509581270, guid: 8f09b6ded272e0540a17b77b848d7b0b, type: 3}
   childSpawnDelayMin: 3
   childSpawnDelayMax: 6
@@ -2107,6 +2293,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2170,6 +2360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2232,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (143)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2253,6 +2451,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2356,6 +2558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2377,6 +2583,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2480,6 +2690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (125)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2499,7 +2713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357489793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2586,6 +2800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (132)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2647,6 +2865,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2710,6 +2932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2720,6 +2946,144 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 371781721}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &380728970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 380728971}
+  - component: {fileID: 380728975}
+  - component: {fileID: 380728974}
+  - component: {fileID: 380728973}
+  - component: {fileID: 380728972}
+  m_Layer: 9
+  m_Name: WalkableSpawnPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &380728971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380728970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.57, y: 0, z: 21.61}
+  m_LocalScale: {x: 2.1494443, y: 1, z: 0.6534417}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1072243423}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &380728972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380728970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: fee08a8be934fcd4a855c2b9f7829829, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!64 &380728973
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380728970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &380728974
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380728970}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 50715a467e1bba94ea9e5bbd39b30c88, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &380728975
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380728970}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &390067511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2771,6 +3135,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (144)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2834,6 +3202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (116)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2853,7 +3225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 423926896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainPath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2928,6 +3300,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3031,6 +3407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3092,6 +3472,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3155,6 +3539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (127)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3216,6 +3604,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3279,6 +3671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3340,6 +3736,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3403,6 +3803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3424,6 +3828,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3474,6 +3882,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
   m_PrefabInstance: {fileID: 576018266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &576421432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3887473748137572779, guid: abf1471a53e4f3745817ded7a21da2c0, type: 3}
+  m_PrefabInstance: {fileID: 1568801186}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &587967551
 PrefabInstance:
@@ -3526,6 +3939,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (139)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3589,6 +4006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3607,6 +4028,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1072243423}
     m_Modifications:
+    - target: {fileID: 23308263155967604, guid: 5d43def46402c234b96b9707a758f567, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6239016184047876103, guid: 5d43def46402c234b96b9707a758f567, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79093593
@@ -3663,10 +4088,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 6764020185539437245, guid: 5d43def46402c234b96b9707a758f567, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6764020185539437245, guid: 5d43def46402c234b96b9707a758f567, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1069767279}
+    - targetCorrespondingSourceObject: {fileID: 23308263155967604, guid: 5d43def46402c234b96b9707a758f567, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219200344}
   m_SourcePrefab: {fileID: 100100000, guid: 5d43def46402c234b96b9707a758f567, type: 3}
 --- !u!4 &595951521 stripped
 Transform:
@@ -3725,6 +4160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (140)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3744,7 +4183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 606935176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3829,6 +4268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (145)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3891,6 +4334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3913,7 +4360,7 @@ GameObject:
   - component: {fileID: 624202992}
   - component: {fileID: 624202991}
   - component: {fileID: 624202990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4019,6 +4466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence Segment (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.29001
@@ -4121,6 +4572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4183,6 +4638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4244,6 +4703,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4317,6 +4780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4378,6 +4845,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (137)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4441,6 +4912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4502,6 +4977,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4565,6 +5044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4626,6 +5109,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (131)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4689,6 +5176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4750,6 +5241,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4813,6 +5308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4834,6 +5333,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4896,6 +5399,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4999,6 +5506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5021,7 +5532,7 @@ GameObject:
   - component: {fileID: 820278990}
   - component: {fileID: 820278989}
   - component: {fileID: 820278988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5167,6 +5678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5228,6 +5743,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (118)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5291,6 +5810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (133)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5312,6 +5835,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5427,6 +5954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adult Pool
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf2da10ff15d254aa89ddcb66b4ca8b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5498,6 +6029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5519,6 +6054,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5622,6 +6161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5631,6 +6174,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 894139231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &905197788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+  m_PrefabInstance: {fileID: 1319986134}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &915509355
 PrefabInstance:
@@ -5684,6 +6232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5703,7 +6255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916996094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Paths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5779,6 +6331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5840,6 +6396,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5903,6 +6463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5924,6 +6488,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6027,6 +6595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6088,6 +6660,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6151,6 +6727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6212,6 +6792,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6366,6 +6950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6387,6 +6975,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6449,6 +7041,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -6555,6 +7151,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6663,6 +7263,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6818,6 +7422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (141)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6828,6 +7436,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 1065305662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1069767276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6764020185539437245, guid: 5d43def46402c234b96b9707a758f567, type: 3}
+  m_PrefabInstance: {fileID: 595951520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1069767279
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069767276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.6350001, y: 1.4180001, z: 1.5760001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 1.1270001, y: 1.4180001, z: -1.342}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1070568749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6839,6 +7468,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6899,7 +7532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1072243423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6919,13 +7552,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 51175425}
   - {fileID: 1377046625}
   - {fileID: 916996094}
   - {fileID: 863427243}
   - {fileID: 1575796775}
-  - {fileID: 236905665}
+  - {fileID: 1660258721}
   - {fileID: 192369835}
   - {fileID: 595951521}
+  - {fileID: 1459687504}
+  - {fileID: 380728971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1099765710
@@ -6979,6 +7615,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7041,6 +7681,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7120,6 +7764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ladder
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27a4b8796b6b70f4f8cbc32352d7fabd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7181,6 +7829,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7244,6 +7896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7305,6 +7961,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7568,6 +8228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence Segment (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4286919
@@ -7630,6 +8294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence Segment (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.290022
@@ -7691,6 +8359,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7798,6 +8470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7808,6 +8484,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 1167735378}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1219200339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 23308263155967604, guid: 5d43def46402c234b96b9707a758f567, type: 3}
+  m_PrefabInstance: {fileID: 595951520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1219200344
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219200339}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 0.00001, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1236196535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7860,6 +8557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7881,6 +8582,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7944,6 +8649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence Segment (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.57130814
@@ -7994,6 +8703,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
   m_PrefabInstance: {fileID: 1274612667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1277638110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+  m_PrefabInstance: {fileID: 66059544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1277638113
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277638110}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1470001, y: 3.1910002, z: 2.1520002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.20400001, y: 2.812, z: -0.5}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1283962118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8005,6 +8735,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -8112,16 +8846,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319986138}
   m_SourcePrefab: {fileID: 100100000, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
 --- !u!4 &1319986135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
   m_PrefabInstance: {fileID: 1319986134}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &1319986138
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905197788}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1470001, y: 3.1910002, z: 2.1520002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.20400001, y: 2.812, z: -0.5}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1323998752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8173,6 +8930,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8236,6 +8997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8257,6 +9022,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8319,6 +9088,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8422,6 +9195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (129)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8484,6 +9261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8505,6 +9286,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -8569,7 +9354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377046625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8605,6 +9390,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8708,6 +9497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8729,6 +9522,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -8836,6 +9633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8897,6 +9698,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8960,6 +9765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9022,6 +9831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9043,6 +9856,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9146,6 +9963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9207,6 +10028,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (130)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9270,6 +10095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9280,6 +10109,144 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 1453503009}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1459687503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459687504}
+  - component: {fileID: 1459687508}
+  - component: {fileID: 1459687507}
+  - component: {fileID: 1459687506}
+  - component: {fileID: 1459687505}
+  m_Layer: 9
+  m_Name: WalkableArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459687504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459687503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.63, y: 0, z: 10.5}
+  m_LocalScale: {x: 3.4056334, y: 1, z: 4.5202885}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1072243423}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459687505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459687503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: ec35f36083fbb144bb4208810e3f2cd0, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!64 &1459687506
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459687503}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1459687507
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459687503}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 50715a467e1bba94ea9e5bbd39b30c88, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1459687508
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459687503}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1472510697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9331,6 +10298,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9406,10 +10377,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2106032471}
   m_SourcePrefab: {fileID: 100100000, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
 --- !u!4 &1517645011 stripped
 Transform:
@@ -9467,6 +10445,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9530,6 +10512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9540,144 +10526,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 1544846274}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1558927833
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1558927837}
-  - component: {fileID: 1558927836}
-  - component: {fileID: 1558927835}
-  - component: {fileID: 1558927834}
-  - component: {fileID: 1558927838}
-  m_Layer: 0
-  m_Name: Invisible Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &1558927834
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558927833}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1558927835
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558927833}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1558927836
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558927833}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1558927837
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558927833}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 236905665}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1558927838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558927833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b5ad5be239ef2db41828be7b0f14d0d1, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1568801186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9742,16 +10590,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush
       objectReference: {fileID: 0}
+    - target: {fileID: 3887473748137572779, guid: abf1471a53e4f3745817ded7a21da2c0, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3887473748137572779, guid: abf1471a53e4f3745817ded7a21da2c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568801191}
   m_SourcePrefab: {fileID: 100100000, guid: abf1471a53e4f3745817ded7a21da2c0, type: 3}
 --- !u!4 &1568801187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3340519715463021153, guid: abf1471a53e4f3745817ded7a21da2c0, type: 3}
   m_PrefabInstance: {fileID: 1568801186}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &1568801191
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576421432}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 0.00001, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1571497953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9803,6 +10674,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9866,6 +10741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9885,7 +10764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575796775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10043,6 +10922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10105,6 +10988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (123)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10126,6 +11013,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -10233,6 +11124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10294,6 +11189,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10357,6 +11256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10419,6 +11322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10438,7 +11345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1660258721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Diving Nodes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10459,7 +11366,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 685380280}
-  m_Father: {fileID: 236905665}
+  m_Father: {fileID: 1072243423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1671977594
 PrefabInstance:
@@ -10512,6 +11419,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (120)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10575,6 +11486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10636,6 +11551,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10699,6 +11618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10761,6 +11684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10782,6 +11709,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -10889,6 +11820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (105)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10950,6 +11885,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11013,6 +11952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11074,6 +12017,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (111)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11137,6 +12084,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11161,7 +12112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066681704755186722, guid: 533ffe1e8062a1d4093fff40790ef291, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6864971872698538855, guid: 533ffe1e8062a1d4093fff40790ef291, type: 3}
       propertyPath: m_LocalScale.x
@@ -11281,6 +12232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11302,6 +12257,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11405,6 +12364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11467,6 +12430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (135)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11488,6 +12455,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11539,6 +12510,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
   m_PrefabInstance: {fileID: 1756840470}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1762788010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+  m_PrefabInstance: {fileID: 186641316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1762788013
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762788010}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1470001, y: 3.1910002, z: 2.1520002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.20400001, y: 2.812, z: -0.5}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1770699652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11590,6 +12582,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11653,6 +12649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11714,6 +12714,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11777,6 +12781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11838,6 +12846,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11995,6 +13007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12005,89 +13021,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 1846161482}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1853127368
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1853127369}
-  - component: {fileID: 1853127371}
-  - component: {fileID: 1853127370}
-  m_Layer: 0
-  m_Name: Concrete
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1853127369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853127368}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 236905665}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1853127370
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853127368}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: dd8413557e7c2c94b9f71366b04a542b, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1853127371
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853127368}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1859667241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12099,6 +13032,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12202,6 +13139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12263,6 +13204,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12326,6 +13271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12388,6 +13337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12449,6 +13402,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12528,6 +13485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diving board
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86b2d81a1d42cc84a8bf619a0db4cba9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12589,6 +13550,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12652,6 +13617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12714,6 +13683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12735,6 +13708,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12798,6 +13775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence Segment (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.29
@@ -12857,7 +13838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987466080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12902,6 +13883,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalScale.x
@@ -12968,6 +13953,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13071,6 +14060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13133,6 +14126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13152,7 +14149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2047736092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PoolBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13331,6 +14328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13392,6 +14393,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13490,6 +14495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (108)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13522,6 +14531,10 @@ PrefabInstance:
     - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_Name
       value: Fence Segment (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657891923204163963, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2038392608461591489, guid: 1edfee11e74b8d647af4ad8b39ece92e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13625,6 +14638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (146)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13686,6 +14703,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13749,6 +14770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (128)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13811,6 +14836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13821,6 +14850,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
   m_PrefabInstance: {fileID: 2103581272}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2106032468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b17ddbe956251ef4988d30a6b5f40dce, type: 3}
+  m_PrefabInstance: {fileID: 1517645010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &2106032471
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106032468}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1470001, y: 3.1910002, z: 2.1520002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.20400001, y: 2.812, z: -0.5}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2111860163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13872,6 +14922,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13935,6 +14989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13957,9 +15015,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: DivingNode
       objectReference: {fileID: 0}
+    - target: {fileID: 3376573027622963594, guid: 67f8ac6cc8fcae54184de94ff4304dde, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456347201160498507, guid: 67f8ac6cc8fcae54184de94ff4304dde, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5608172932033848196, guid: 67f8ac6cc8fcae54184de94ff4304dde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.26
+      value: 7.97
       objectReference: {fileID: 0}
     - target: {fileID: 5608172932033848196, guid: 67f8ac6cc8fcae54184de94ff4304dde, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14054,6 +15120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14116,6 +15186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Path Tile (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14177,6 +15251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
       propertyPath: m_Name
       value: Path Tile (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38e9045b932f4bd41b96e5a6a75f5687, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
