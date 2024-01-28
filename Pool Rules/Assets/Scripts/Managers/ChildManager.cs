@@ -13,7 +13,7 @@ public class ChildManager : MonoBehaviour
     void Start()
     {
         ResetSpawnTimer();
-        Spawn();
+        //Spawn();
     }
 
     void ResetSpawnTimer()

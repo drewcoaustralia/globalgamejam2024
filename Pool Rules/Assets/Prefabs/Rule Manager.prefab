@@ -74,12 +74,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scheduledChanges:
+  - ruleName: No Drowning
+    changeTime: 0
+    newState: 1
+  - ruleName: No Drowning
+    changeTime: 240
+    newState: 0
   - ruleName: No Running
     changeTime: 0
     newState: 1
   - ruleName: No Running
     changeTime: 120
     newState: 0
+  - ruleName: No Diving
+    changeTime: 15
+    newState: 1
   - ruleName: No Swimming
     changeTime: 120
     newState: 1
@@ -92,6 +101,24 @@ MonoBehaviour:
   - ruleName: No Walking
     changeTime: 240
     newState: 0
+  - ruleName: No Flips
+    changeTime: 60
+    newState: 1
+  - ruleName: No Food Or Drink
+    changeTime: 10
+    newState: 1
+  - ruleName: No Smiling
+    changeTime: 20
+    newState: 1
+  - ruleName: No Phones
+    changeTime: 30
+    newState: 1
+  - ruleName: No Flip Phones
+    changeTime: 33
+    newState: 1
+  - ruleName: No Flip Flops
+    changeTime: 36
+    newState: 1
 --- !u!114 &7987667371896576428
 MonoBehaviour:
   m_ObjectHideFlags: 0

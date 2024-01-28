@@ -325,8 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childPrefab: {fileID: 6250621930509581270, guid: 8f09b6ded272e0540a17b77b848d7b0b, type: 3}
-  childSpawnDelayMin: 3
-  childSpawnDelayMax: 6
+  childSpawnDelayMin: 1
+  childSpawnDelayMax: 5
   childSpawnCountMax: 2
 --- !u!1001 &310685970
 PrefabInstance:
@@ -336,6 +336,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2068489347}
     m_Modifications:
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[15].newState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[15].ruleName
+      value: No Ferrets
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[15].changeTime
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6991117219129910791, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2496,6 +2512,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3939950565043079201, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
+      propertyPath: onFirstLifeLost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1135312721}
+    - target: {fileID: 3939950565043079201, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
+      propertyPath: onThirdLifeLost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 667476216}
+    - target: {fileID: 3939950565043079201, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
+      propertyPath: onSecondLifeLost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1371135748}
     - target: {fileID: 8360553438286535276, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
       propertyPath: m_Name
       value: Score Manager
@@ -2503,78 +2531,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8360553438286535276, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6801485852815913098}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
 --- !u!4 &6801485852815913096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1533355381885645695, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
   m_PrefabInstance: {fileID: 6801485852815913095}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6801485852815913097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8360553438286535276, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
-  m_PrefabInstance: {fileID: 6801485852815913095}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6801485852815913098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6801485852815913097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f445e4c6eb1df7429f1befc712063ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onFirstLifeLost:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1135312721}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onSecondLifeLost:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1371135748}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onThirdLifeLost:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 667476216}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
