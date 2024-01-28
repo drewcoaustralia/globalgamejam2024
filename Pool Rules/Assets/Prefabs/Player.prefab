@@ -393,6 +393,8 @@ GameObject:
   - component: {fileID: 533954021477275594}
   - component: {fileID: 8374116990077305651}
   - component: {fileID: 3118565714509956382}
+  - component: {fileID: 497723951746378166}
+  - component: {fileID: 7817755884848065164}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -640,6 +642,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &497723951746378166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7297931225829051921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c251b81949e24dc4cba7172fc53b208d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 16
+  onEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7817755884848065164}
+        m_TargetAssemblyTypeName: HeightChanger, Assembly-CSharp
+        m_MethodName: EnterWater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7817755884848065164}
+        m_TargetAssemblyTypeName: HeightChanger, Assembly-CSharp
+        m_MethodName: ExitWater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStay:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7817755884848065164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7297931225829051921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e172f86ae5b2d6e488def76f6c9f5038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterHeight: 1
 --- !u!1 &7936833182576120036
 GameObject:
   m_ObjectHideFlags: 0
