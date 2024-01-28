@@ -107,12 +107,12 @@ public class ChildAnimationController : MonoBehaviour
     {
         if (currentAnimationState == name)
         {
-            Debug.LogWarning("Already in animation state " + name);
+            //Debug.LogWarning("Already in animation state " + name);
             return;
         }
         if (!animationsDictionary.TryGetValue(name, out AnimationBundle bundle))
         {
-            Debug.LogWarning("Animation " + name + " doesn't exist!");
+            //Debug.LogWarning("Animation " + name + " doesn't exist!");
             return;
         }
 
