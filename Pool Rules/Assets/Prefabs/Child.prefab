@@ -1085,14 +1085,6 @@ PrefabInstance:
       propertyPath: childRuleStates
       value: 
       objectReference: {fileID: 453979999166173449}
-    - target: {fileID: 854290323900900321, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: totalChance
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1468218293473045665, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: swimmingSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1468218293473045665, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childRuleStates
       value: 
@@ -1105,10 +1097,6 @@ PrefabInstance:
       propertyPath: childRuleStates
       value: 
       objectReference: {fileID: 453979999166173449}
-    - target: {fileID: 3513831884378533684, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: odds
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3513831884378533684, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childRuleStates
       value: 
@@ -1125,26 +1113,6 @@ PrefabInstance:
       propertyPath: childRuleStates
       value: 
       objectReference: {fileID: 453979999166173449}
-    - target: {fileID: 6008658446889640153, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: States.Array.data[3].Transitions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6008658446889640153, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: States.Array.data[3].Transitions.Array.data[0].Decision
-      value: 
-      objectReference: {fileID: 7398884701114292846}
-    - target: {fileID: 6008658446889640153, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: States.Array.data[3].Transitions.Array.data[1].Decision
-      value: 
-      objectReference: {fileID: 1159744905742062524}
-    - target: {fileID: 6008658446889640153, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: States.Array.data[3].Transitions.Array.data[0].TrueState
-      value: Swimming
-      objectReference: {fileID: 0}
-    - target: {fileID: 6008658446889640153, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: States.Array.data[3].Transitions.Array.data[1].TrueState
-      value: Idle
-      objectReference: {fileID: 0}
     - target: {fileID: 6244389035557437825, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childRuleStates
       value: 
@@ -1193,10 +1161,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7210192049296685498, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-      propertyPath: m_Name
-      value: StartIdleFromRunning
-      objectReference: {fileID: 0}
     - target: {fileID: 8071993729767563572, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
       propertyPath: childNavMeshAgent
       value: 
@@ -1222,28 +1186,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
---- !u!114 &1159744905742062524 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 854290323900900321, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-  m_PrefabInstance: {fileID: 2000496935453700189}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d510393d701af8a4390898691292d79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7398884701114292846 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9037931920541149747, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}
-  m_PrefabInstance: {fileID: 2000496935453700189}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fa1bcc7742a0043b9547f148523394, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &9208800364828863191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7209993043836213898, guid: 8f830ed7ea31e3841a8d95a500229542, type: 3}

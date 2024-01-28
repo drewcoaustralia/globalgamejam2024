@@ -28,6 +28,7 @@ public class AIActionDrowning : AIAction
     {
         base.OnEnterState();
         childNavMeshAgent.baseOffset = drowningBaseOffset;
+        AudioManager.Instance.PlayDrowningSFX();
     }
 
     public override void OnExitState()

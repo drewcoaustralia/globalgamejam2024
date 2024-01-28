@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : Singleton<AudioManager>
 {
-    public static AudioManager Instance { get; private set; }
-
     public AudioClip bgm;
     public AudioClip ambient;
-    private List<AudioSource> _sources;
 
-    private void Awake()
-    {
-        if (Instance != null && Instance != this) Destroy(this);
-        else Instance = this;
-    }
+    public AudioSource drowningSFXSource;
+
+    private List<AudioSource> _sources;
 
     void Start()
     {
@@ -33,10 +28,28 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioClip clip)
     {
+        foreach (var source in _sources)
+        {
+            if (source.clip == clip && source.isPlaying)
+            {
+                return;
+            }
+        }
+
         GameObject obj = new GameObject("Temp Audio Object");
         AudioSource src = obj.AddComponent<AudioSource>();
         src.clip = clip;
         src.PlayOneShot(src.clip);
         Destroy(obj, clip.length + 1);
+    }
+
+    public void PlayDrowningSFX()
+    {
+        if (drowningSFXSource.isPlaying)
+        {
+            drowningSFXSource.Stop();
+        }
+
+        drowningSFXSource.Play();
     }
 }

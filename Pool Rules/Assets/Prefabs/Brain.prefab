@@ -93,6 +93,9 @@ MonoBehaviour:
     Actions:
     - {fileID: 3598559851593874272}
     Transitions:
+    - Decision: {fileID: 9037931920541149747}
+      TrueState: Swimming
+      FalseState: 
     - Decision: {fileID: 854290323900900321}
       TrueState: Idle
       FalseState: 
@@ -107,6 +110,9 @@ MonoBehaviour:
     Actions:
     - {fileID: 1468218293473045665}
     Transitions:
+    - Decision: {fileID: 3922330420664364899}
+      TrueState: Drowning
+      FalseState: 
     - Decision: {fileID: 9037931920541149747}
       TrueState: 
       FalseState: Wandering
@@ -309,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childRuleStates: {fileID: 0}
   totalChance: 250
-  odds: 1
+  odds: 4
 --- !u!1 &3123881156149206348
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +410,7 @@ MonoBehaviour:
   logStateChange: 1
   childRuleStates: {fileID: 0}
   childNavMeshAgent: {fileID: 0}
-  swimmingSpeed: 2
+  swimmingSpeed: 1.5
   swimmingBaseOffset: 0.3
   moveRange: 10
 --- !u!1 &3712399101737407130
@@ -700,7 +706,7 @@ GameObject:
   - component: {fileID: 202900020456166086}
   - component: {fileID: 854290323900900321}
   m_Layer: 7
-  m_Name: StartIdle (1)
+  m_Name: StartIdleFromRunning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -733,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510393d701af8a4390898691292d79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChance: 150
+  totalChance: 500
   odds: 1
 --- !u!1 &7459744334046087480
 GameObject:
