@@ -336,22 +336,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2068489347}
     m_Modifications:
-    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.data[15].newState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.data[15].ruleName
-      value: No Ferrets
-      objectReference: {fileID: 0}
-    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.data[15].changeTime
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 6991117219129910791, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

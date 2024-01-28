@@ -75,50 +75,137 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scheduledChanges:
   - ruleName: No Drowning
-    changeTime: 0
-    newState: 1
-  - ruleName: No Drowning
-    changeTime: 240
-    newState: 0
+    startTime: 0
+    timer: 300
   - ruleName: No Running
-    changeTime: 0
-    newState: 1
-  - ruleName: No Running
-    changeTime: 120
-    newState: 0
-  - ruleName: No Diving
-    changeTime: 15
-    newState: 1
-  - ruleName: No Swimming
-    changeTime: 120
-    newState: 1
-  - ruleName: No Swimming
-    changeTime: 180
-    newState: 0
+    startTime: 10
+    timer: 120
   - ruleName: No Walking
-    changeTime: 180
-    newState: 1
-  - ruleName: No Walking
-    changeTime: 240
-    newState: 0
+    startTime: 140
+    timer: 120
+  - ruleName: No Swimming
+    startTime: 400
+    timer: 120
+  - ruleName: No Swimming
+    startTime: 400
+    timer: 120
   - ruleName: No Flips
-    changeTime: 60
-    newState: 1
+    startTime: 20
+    timer: 120
   - ruleName: No Food Or Drink
-    changeTime: 10
-    newState: 1
+    startTime: 30
+    timer: 120
   - ruleName: No Smiling
-    changeTime: 20
-    newState: 1
+    startTime: 40
+    timer: 120
+  - ruleName: No Diving
+    startTime: 180
+    timer: 120
   - ruleName: No Phones
-    changeTime: 30
-    newState: 1
+    startTime: 50
+    timer: 120
   - ruleName: No Flip Phones
-    changeTime: 33
-    newState: 1
+    startTime: 55
+    timer: 120
   - ruleName: No Flip Flops
-    changeTime: 36
-    newState: 1
+    startTime: 60
+    timer: 120
+  - ruleName: No Ferrets
+    startTime: 70
+    timer: 30
+  - ruleName: No Trenchcoats
+    startTime: 80
+    timer: 30
+  - ruleName: No Prime Ministers
+    startTime: 90
+    timer: 30
+  - ruleName: No Swearing
+    startTime: 100
+    timer: 30
+  - ruleName: No Backstroke
+    startTime: 110
+    timer: 30
+  - ruleName: No SCUBA Gear
+    startTime: 120
+    timer: 30
+  - ruleName: No Aliens
+    startTime: 130
+    timer: 30
+  - ruleName: No Gingers
+    startTime: 140
+    timer: 30
+  - ruleName: No Smoking
+    startTime: 150
+    timer: 45
+  - ruleName: No Vaping
+    startTime: 150
+    timer: 30
+  - ruleName: No Beards
+    startTime: 160
+    timer: 180
+  - ruleName: No Streaking
+    startTime: 165
+    timer: 60
+  - ruleName: No Daydreaming
+    startTime: 170
+    timer: 30
+  - ruleName: No Noodles
+    startTime: 180
+    timer: 45
+  - ruleName: No Parking
+    startTime: 185
+    timer: 30
+  - ruleName: No Towels
+    startTime: 190
+    timer: 120
+  - ruleName: No Contemplating The Meaning Of Life
+    startTime: 200
+    timer: 120
+  - ruleName: No Urinating
+    startTime: 35
+    timer: 300
+  - ruleName: No Cooking
+    startTime: 210
+    timer: 60
+  - ruleName: No Overthrowing The Government
+    startTime: 220
+    timer: 45
+  - ruleName: No Boomboxes
+    startTime: 230
+    timer: 30
+  - ruleName: No Beatboxing
+    startTime: 235
+    timer: 30
+  - ruleName: No Boxing
+    startTime: 340
+    timer: 30
+  - ruleName: No Toasters
+    startTime: 350
+    timer: 30
+  - ruleName: No Fishing
+    startTime: 360
+    timer: 30
+  - ruleName: No Laughing
+    startTime: 370
+    timer: 30
+  - ruleName: No Littering
+    startTime: 380
+    timer: 30
+  - ruleName: No Fighting
+    startTime: 390
+    timer: 30
+  - ruleName: No Bikes
+    startTime: 400
+    timer: 30
+  - ruleName: No Scooters
+    startTime: 410
+    timer: 30
+  - ruleName: No Skateboards
+    startTime: 420
+    timer: 30
+  - ruleName: No Ball Games
+    startTime: 430
+    timer: 30
 --- !u!114 &7987667371896576428
 MonoBehaviour:
   m_ObjectHideFlags: 0
