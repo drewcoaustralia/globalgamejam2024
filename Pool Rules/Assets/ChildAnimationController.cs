@@ -17,8 +17,35 @@ public class AnimationBundle
 public class ChildAnimationController : MonoBehaviour
 {
     public bool isLifeguard = false;
-    public List<Color> skinColors;
-    public List<Color> clothesColors;
+    public List<Color> skinColors = new List<Color> {
+                                     new Color32(0xFF, 0xDF, 0xC4, 1),
+                                     new Color32(0xE7, 0xBC, 0x91, 1),
+                                     new Color32(0xB2, 0x6A, 0x49, 1),
+                                     new Color32(0xEA, 0xCB, 0xA8, 1),
+                                     new Color32(0xEC, 0xBF, 0x83, 1),
+                                     new Color32(0xAE, 0x70, 0x3A, 1),
+                                     new Color32(0xF7, 0xE2, 0xAB, 1),
+                                     new Color32(0xCF, 0x9E, 0x7C, 1),
+                                     new Color32(0x99, 0x64, 0x4D, 1),
+                                     new Color32(0xDC, 0xB9, 0x91, 1),
+                                     new Color32(0xAC, 0x8B, 0x64, 1),
+                                     new Color32(0x62, 0x3A, 0x18, 1),
+                                     new Color32(0xF0, 0xC0, 0x8A, 1),
+                                     new Color32(0x94, 0x61, 0x3C, 1),
+                                     new Color32(0x3F, 0x28, 0x18, 1)
+                                     };
+    public List<Color> clothesColors = new List<Color> {
+                                     new Color32(0x1D, 0xC0, 0x7D, 1),
+                                     new Color32(0xC5, 0x94, 0xD0, 1),
+                                     new Color32(0xE4, 0x7C, 0x1F, 1),
+                                     new Color32(0x55, 0xAB, 0xD8, 1),
+                                     new Color32(0x2B, 0x80, 0x43, 1),
+                                     new Color32(0xDA, 0x6E, 0x99, 1),
+                                     new Color32(0x2C, 0x37, 0x7B, 1),
+                                     new Color32(0x68, 0x18, 0x18, 1),
+                                     new Color32(0x9D, 0xC7, 0x2B, 1),
+                                     new Color32(0x6D, 0x34, 0x18, 1)
+                                     };
 
     public GameObject skin;
     private SpriteRenderer skinRend;
