@@ -89,9 +89,7 @@ public class PlayerController : MonoBehaviour
         transform.position += vel * moveSpeed * Time.deltaTime;
 
         if (handsEmpty) PerformRaycasts();
-        Debug.Log("raycasting with: " + closestChild);
-
-        if (Input.GetKeyDown(KeyCode.Space)) Debug.Log("Space pressed");
+        //Debug.Log("raycasting with: " + closestChild);
 
         if (handsEmpty && closestChild != null && Input.GetKeyDown(KeyCode.Space))
         {
@@ -114,6 +112,16 @@ public class PlayerController : MonoBehaviour
             heldObj.GetComponent<Rigidbody>().AddForce(throwForce,ForceMode.Impulse);
             float spin = Random.Range(throwSpinMin, throwSpinMax);
             heldObj.GetComponent<Rigidbody>().AddTorque(transform.right * spin, ForceMode.Impulse);
+            
+            if (heldObj.GetComponent<ChildRuleStates>().HasBrokenARule)
+            {
+                ScoreManager.Instance.AddScore();
+            }
+            else
+            {
+                ScoreManager.Instance.LoseLife();
+            }
+
             heldObj = null;
         }
     }
