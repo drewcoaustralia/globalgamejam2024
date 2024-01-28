@@ -39,9 +39,12 @@ public class AIActionRunning : AIAction
 
     public override void PerformAction()
     {
-        if (!childNavMeshAgent.pathPending && childNavMeshAgent.remainingDistance < 0.1f)
+        if (childNavMeshAgent.isActiveAndEnabled && !childNavMeshAgent.pathPending)
         {
-            MoveToRandomTarget();
+            if (childNavMeshAgent.remainingDistance < 0.1f)
+            {
+                MoveToRandomTarget();
+            }
         }
     }
 

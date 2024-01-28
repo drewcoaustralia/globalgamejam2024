@@ -25,15 +25,15 @@ public class RuleToggleGUI : MonoBehaviour
     {
         ruleNames = new string[]
         {
-            "NoSwimming", "NoRunning", "NoDrowning", "NoFlips", "NoFoodOrDrink",
-            "NoSmiling", "NoDiving", "NoWalking", "NoPhones", "NoFlipPhone",
-            "NoFlipFlops", "NoFerret", "NoTrenchcoat", "NoPrimeMinister", "NoSwearing",
-            "NoBackstroking", "NoScubaGear", "NoAlien", "NoGinger", "NoSmoking",
-            "NoVaping", "NoBeard", "NoStreaking", "NoDaydreaming", "NoNoodle",
-            "NoParking", "NoTowel", "NoContemplatingTheMeaningOfLife", "NoUrinating",
-            "NoCooking", "NoOverthrowingGovernment", "NoBoombox", "NoBeatboxing",
-            "NoBoxing", "NoToaster", "NoFishing", "NoLaughing", "NoLittering",
-            "NoFighting", "NoBike", "NoScooter", "NoSkateboard", "NoBallGame"
+            "No Swimming", "No Running", "No Drowning", "No Flips", "No Food Or Drink",
+            "No Smiling", "No Diving", "No Walking", "No Phones", "No Flip Phones",
+            "No Flip Flops", "No Ferrets", "No Trenchcoats", "No Prime Ministers", "No Swearing",
+            "No Backstroking", "No SCUBA Gear", "No Aliens", "No Gingers", "No Smoking",
+            "No Vaping", "No Beards", "No Streaking", "No Daydreaming", "No Noodle",
+            "No Parking", "No Towel", "No Contemplating The Meaning Of Life", "No Urinating",
+            "No Cooking", "No Overthrowing The Government", "No Boomboxes", "No Beatboxing",
+            "No Boxing", "No Toasters", "No Fishing", "No Laughing", "No Littering",
+            "No Fighting", "No Bike", "No Scooter", "No Skateboard", "No Ball Games", "No Phishing"
         };
 
         int numberOfRules = ruleNames.Length;

@@ -45,19 +45,23 @@ public class AIActionFlipping : AIAction
     private void MoveToNearestDivingNode()
     {
         _nearestDivingNode = _divingNodeManager.FindClosestNode(transform.position);
-        childNavMeshAgent.SetDestination(_nearestDivingNode.transform.position);
-        _isMovingToNode = true;
-        StartCoroutine(FlipCoroutine());
+
+        if (childNavMeshAgent.isActiveAndEnabled)
+        {
+            childNavMeshAgent.SetDestination(_nearestDivingNode.transform.position);
+            _isMovingToNode = true;
+            StartCoroutine(FlipCoroutine());
+        }
     }
 
     private IEnumerator FlipCoroutine()
     {
         yield return new WaitForSeconds(0.1f);
 
-        if (_nearestDivingNode != null)
+        if (_nearestDivingNode != null && childNavMeshAgent.isActiveAndEnabled)
         {
             // Wait until we have reached the diving node
-            while (childNavMeshAgent.pathPending || childNavMeshAgent.remainingDistance > childNavMeshAgent.stoppingDistance)
+            while (childNavMeshAgent.pathPending || (childNavMeshAgent.isActiveAndEnabled && childNavMeshAgent.remainingDistance > childNavMeshAgent.stoppingDistance))
             {
                 yield return null;
             }
@@ -67,10 +71,13 @@ public class AIActionFlipping : AIAction
 
             // Move to the child landing node
             Transform child = _nearestDivingNode.transform.GetChild(0);
-            childNavMeshAgent.SetDestination(child.position);
+            if (childNavMeshAgent.isActiveAndEnabled)
+            {
+                childNavMeshAgent.SetDestination(child.position);
+            }
 
             // Wait until we have reached the child landing node
-            while (childNavMeshAgent.pathPending || childNavMeshAgent.remainingDistance > childNavMeshAgent.stoppingDistance)
+            while (childNavMeshAgent.pathPending || (childNavMeshAgent.isActiveAndEnabled && childNavMeshAgent.remainingDistance > childNavMeshAgent.stoppingDistance))
             {
                 yield return null;
             }

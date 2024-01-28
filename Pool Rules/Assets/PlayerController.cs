@@ -19,10 +19,11 @@ public class PlayerController : MonoBehaviour
     //private List<GameObject> foundChildren = new List<GameObject>();
     private bool handsEmpty = true;
     private GameObject heldObj = null;
+    private ChildAnimationController _animationController;
 
     void Start()
     {
-        
+        _animationController = GetComponent<ChildAnimationController>();
     }
 
     void PerformRaycasts()
@@ -74,6 +75,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         vel = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        if (vel.magnitude > 0f) _animationController.SetAnimation("walking");
+        else _animationController.SetAnimation("idle");
         if (vel.sqrMagnitude > 1.0f) vel.Normalize();
 
         if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
@@ -86,19 +89,16 @@ public class PlayerController : MonoBehaviour
         transform.position += vel * moveSpeed * Time.deltaTime;
 
         if (handsEmpty) PerformRaycasts();
-        Debug.Log("raycasting with: " + closestChild);
-
-        if (Input.GetKeyDown(KeyCode.Space)) Debug.Log("Space pressed");
+        //Debug.Log("raycasting with: " + closestChild);
 
         if (handsEmpty && closestChild != null && Input.GetKeyDown(KeyCode.Space))
         {
             handsEmpty = false;
             heldObj = closestChild;
-            heldObj.GetComponent<ChildAnimationController>().SetSelected(false);
-            heldObj.GetComponent<Rigidbody>().isKinematic = false;
-            heldObj.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
             heldObj.transform.parent = transform;
             heldObj.transform.position = pickupPosition.position;
+            heldObj.GetComponent<ChildAnimationController>().DisableBrains();
+            heldObj.GetComponent<Rigidbody>().isKinematic = false;
             heldObj.GetComponent<Rigidbody>().useGravity = false;
             closestChild = null;
         }
@@ -107,12 +107,21 @@ public class PlayerController : MonoBehaviour
             handsEmpty = true;
             heldObj.transform.parent = null;
             heldObj.GetComponent<Rigidbody>().useGravity = true;
-            heldObj.GetComponent<ChildAnimationController>().StartAnimating();
+            heldObj.GetComponent<ChildAnimationController>().SetAnimation("flailing");
             Vector3 throwForce = throwPower * (Quaternion.AngleAxis(throwAngle, transform.TransformDirection(Vector3.right)) * transform.TransformDirection(Vector3.forward));
-            Debug.Log(throwForce);
             heldObj.GetComponent<Rigidbody>().AddForce(throwForce,ForceMode.Impulse);
             float spin = Random.Range(throwSpinMin, throwSpinMax);
             heldObj.GetComponent<Rigidbody>().AddTorque(transform.right * spin, ForceMode.Impulse);
+            
+            if (heldObj.GetComponent<ChildRuleStates>().HasBrokenARule)
+            {
+                ScoreManager.Instance.AddScore();
+            }
+            else
+            {
+                ScoreManager.Instance.LoseLife();
+            }
+
             heldObj = null;
         }
     }

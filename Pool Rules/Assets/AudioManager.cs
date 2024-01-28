@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioClip clip)
     {
-        GameObject obj = GameObject.Instantiate(new GameObject());
+        GameObject obj = new GameObject("Temp Audio Object");
         AudioSource src = obj.AddComponent<AudioSource>();
         src.clip = clip;
         src.PlayOneShot(src.clip);
