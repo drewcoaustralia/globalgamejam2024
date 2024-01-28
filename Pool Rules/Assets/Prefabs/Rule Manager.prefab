@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8778004827192075570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6991117219129910791}
+  - component: {fileID: 691438854153901261}
+  - component: {fileID: 4571267503194428580}
+  - component: {fileID: 6898707898212899854}
+  - component: {fileID: 7987667371896576428}
+  m_Layer: 0
+  m_Name: Rule Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6991117219129910791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778004827192075570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691438854153901261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778004827192075570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53392611f8c9564a8ce81434739e98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logRuleChanges: 0
+--- !u!114 &4571267503194428580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778004827192075570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d69591d356932c4ba2a478f3271aa21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGUI: 0
+--- !u!114 &6898707898212899854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778004827192075570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09b31e3261811940881e22db7df7bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scheduledChanges:
+  - ruleName: No Running
+    changeTime: 0
+    newState: 1
+  - ruleName: No Running
+    changeTime: 120
+    newState: 0
+  - ruleName: No Swimming
+    changeTime: 120
+    newState: 1
+  - ruleName: No Swimming
+    changeTime: 180
+    newState: 0
+  - ruleName: No Walking
+    changeTime: 180
+    newState: 1
+  - ruleName: No Walking
+    changeTime: 240
+    newState: 0
+--- !u!114 &7987667371896576428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778004827192075570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55ffa6f562269d4d8c21b18766ad187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signLeft: {fileID: 0}
+  signRight: {fileID: 0}
