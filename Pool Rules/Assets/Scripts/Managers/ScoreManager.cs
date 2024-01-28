@@ -8,6 +8,7 @@ public class ScoreManager : Singleton<ScoreManager>
     public UnityEvent onFirstLifeLost;
     public UnityEvent onSecondLifeLost;
     public UnityEvent onThirdLifeLost;
+    public UnityEvent onGameOver;
 
     private int _score = 0;
     private int _fails = 0;
@@ -32,6 +33,7 @@ public class ScoreManager : Singleton<ScoreManager>
         else if (_fails == 3)
         {
             onThirdLifeLost.Invoke();
+            onGameOver.Invoke();
         }
     }
 }
