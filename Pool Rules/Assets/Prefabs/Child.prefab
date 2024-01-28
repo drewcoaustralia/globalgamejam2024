@@ -93,9 +93,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639507635935451529}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2962c097b66028449b809c4d17b844ec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4c673f07eb141fb438eeef5a0fccd148, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -199,9 +199,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753649743253865100}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf144866022bfa947aecc199f531d03a, type: 2}
+  m_Controller: {fileID: 9100000, guid: e16cf39855c79c6449b839d606486341, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -305,9 +305,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3931339617801801836}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4dc43d7f80bb92479bd946c424746b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5daf6c0080513664bbb51cc14f691859, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -411,9 +411,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5879751241662756189}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf144866022bfa947aecc199f531d03a, type: 2}
+  m_Controller: {fileID: 9100000, guid: e16cf39855c79c6449b839d606486341, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 8343522922593103277}
   - component: {fileID: 706936001530146138}
   - component: {fileID: -6329408413796483659}
+  - component: {fileID: 5714829862283506664}
   m_Layer: 7
   m_Name: Child
   m_TagString: Untagged
@@ -744,6 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8a9d02d6169ef42bf0e0133f80c28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLifeguard: 0
   skinColors:
   - {r: 1, g: 0.8745098, b: 0.76862746, a: 1}
   - {r: 0.96862745, g: 0.8862745, b: 0.67058825, a: 1}
@@ -760,7 +762,140 @@ MonoBehaviour:
   clothesTrunksBack: {fileID: 8455711421719906331}
   clothesOnePieceFront: {fileID: 5879751241662756189}
   clothesOnePieceBack: {fileID: 1753649743253865100}
-  throwSound: {fileID: 8300000, guid: 8ba20b332ef535a48984465744032c44, type: 3}
+  animations:
+  - name: idle
+    sfx: {fileID: 0}
+    audioLoops: 0
+    animSkin: {fileID: 9100000, guid: 4c673f07eb141fb438eeef5a0fccd148, type: 2}
+    animClothesTrunks: {fileID: 9100000, guid: 5daf6c0080513664bbb51cc14f691859, type: 2}
+    animClothesOnePiece: {fileID: 9100000, guid: e16cf39855c79c6449b839d606486341, type: 2}
+  - name: walking
+    sfx: {fileID: 0}
+    audioLoops: 0
+    animSkin: {fileID: 9100000, guid: e316805465341e54796f6f7915712f19, type: 2}
+    animClothesTrunks: {fileID: 9100000, guid: 05db6468435a0fa4fb79952b67ef116f, type: 2}
+    animClothesOnePiece: {fileID: 9100000, guid: e71504deb28de7d4b94edfd4f886885c, type: 2}
+  - name: running
+    sfx: {fileID: 0}
+    audioLoops: 0
+    animSkin: {fileID: 9100000, guid: e316805465341e54796f6f7915712f19, type: 2}
+    animClothesTrunks: {fileID: 9100000, guid: 05db6468435a0fa4fb79952b67ef116f, type: 2}
+    animClothesOnePiece: {fileID: 9100000, guid: e71504deb28de7d4b94edfd4f886885c, type: 2}
+  - name: drowning
+    sfx: {fileID: 0}
+    audioLoops: 0
+    animSkin: {fileID: 9100000, guid: 2f7a9b636cdffb740985a4f464d6f12e, type: 2}
+    animClothesTrunks: {fileID: 9100000, guid: 882d1ee7d5499624dab996bbe6e02b24, type: 2}
+    animClothesOnePiece: {fileID: 9100000, guid: 64c9a79e739785244bc35228ffb7647f, type: 2}
+  - name: flailing
+    sfx: {fileID: 8300000, guid: 8ba20b332ef535a48984465744032c44, type: 3}
+    audioLoops: 0
+    animSkin: {fileID: 9100000, guid: 2962c097b66028449b809c4d17b844ec, type: 2}
+    animClothesTrunks: {fileID: 9100000, guid: f4dc43d7f80bb92479bd946c424746b8, type: 2}
+    animClothesOnePiece: {fileID: 9100000, guid: bf144866022bfa947aecc199f531d03a, type: 2}
+  - name: jumping
+    sfx: {fileID: 0}
+    audioLoops: 0
+    animSkin: {fileID: 0}
+    animClothesTrunks: {fileID: 0}
+    animClothesOnePiece: {fileID: 0}
+  currentAnimationState: idle
+--- !u!82 &5714829862283506664
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250621930509581270}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7312106022717067596
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +905,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8735880831651166094}
+  - component: {fileID: 632100915119994470}
+  - component: {fileID: 7377994689969662963}
   m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
@@ -797,6 +934,31 @@ Transform:
   - {fileID: 4709110475009285989}
   m_Father: {fileID: 4192052189887446674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632100915119994470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312106022717067596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777bf60258b23934bad42da670c713ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7377994689969662963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312106022717067596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fc355d4b7b7c742bef7d934ba9b7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeXZAxis: 1
 --- !u!1 &8455711421719906331
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,9 +1052,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8455711421719906331}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4dc43d7f80bb92479bd946c424746b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5daf6c0080513664bbb51cc14f691859, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
