@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,8 +8,11 @@ public class AIActionStart : AIAction
     [SerializeField] private NavMeshAgent childNavMeshAgent;
     [SerializeField] private AIDecisionTriggered aiDecisionTriggered;
 
-    private GameObject _moveToNode;
+    private GameObject _firstNode;
+    private GameObject _secondNode;
     private bool _isMovingToNode = false;
+    private bool _hasReachedFirstNode = false;
+    private bool _hasReachedSecondNode = false;
     private float _originalStoppingDistance;
 
     private void Awake()
@@ -24,7 +26,8 @@ public class AIActionStart : AIAction
 
     private void Start()
     {
-        _moveToNode = StartNodeManager.Instance.startNode;
+        _firstNode = StartNodeManager.Instance.startNode;
+        _secondNode = StartNodeManager.Instance.GetRandomNode();
     }
 
     public override void OnEnterState()
@@ -36,36 +39,78 @@ public class AIActionStart : AIAction
 
     public override void PerformAction()
     {
-        if (!_isMovingToNode)
+        if (!_isMovingToNode && !_hasReachedFirstNode)
         {
-            MoveToNode();
+            MoveToFirstNode();
+        }
+        else if (_hasReachedFirstNode && !_isMovingToNode)
+        {
+            MoveToSecondNode();
+        }
+        else if (_hasReachedSecondNode)
+        {
+            TransitionOut();
         }
     }
 
-    private void MoveToNode()
+    private void MoveToFirstNode()
     {
         if (childNavMeshAgent.isActiveAndEnabled)
         {
             childNavMeshAgent.stoppingDistance = 5.0f;
-            childNavMeshAgent.SetDestination(_moveToNode.transform.position);
+            childNavMeshAgent.SetDestination(_firstNode.transform.position);
             _isMovingToNode = true;
 
-            //StartCoroutine(MoveCoroutine());
-            StartCoroutine(ForceTransitionOutAfterDelay(12.0f));
+            StartCoroutine(FirstMoveCoroutine());
+            //StartCoroutine(ForceTransitionOutAfterDelay(12.0f));
         }
     }
 
-    private IEnumerator MoveCoroutine()
+    private IEnumerator FirstMoveCoroutine()
     {
         yield return new WaitForSeconds(0.1f);
 
-        if (_moveToNode != null && childNavMeshAgent.isActiveAndEnabled)
+        if (_firstNode != null && childNavMeshAgent.isActiveAndEnabled)
         {
             while (childNavMeshAgent.pathPending || (childNavMeshAgent.isActiveAndEnabled && childNavMeshAgent.remainingDistance > childNavMeshAgent.stoppingDistance))
             {
                 yield return null;
             }
 
+            //TransitionOut();
+            //Debug.Log("reached first node");
+            _hasReachedFirstNode = true;
+            _isMovingToNode = false;
+        }
+    }
+
+    private void MoveToSecondNode()
+    {
+        if (childNavMeshAgent.isActiveAndEnabled)
+        {
+            childNavMeshAgent.stoppingDistance = 5.0f;
+            childNavMeshAgent.SetDestination(_secondNode.transform.position);
+            _isMovingToNode = true;
+
+            StartCoroutine(SecondMoveCoroutine());
+            //StartCoroutine(ForceTransitionOutAfterDelay(12.0f));
+        }
+    }
+
+    private IEnumerator SecondMoveCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        if (_firstNode != null && childNavMeshAgent.isActiveAndEnabled)
+        {
+            while (childNavMeshAgent.pathPending || (childNavMeshAgent.isActiveAndEnabled && childNavMeshAgent.remainingDistance > childNavMeshAgent.stoppingDistance))
+            {
+                yield return null;
+            }
+
+            //Debug.Log("reached second node");
+            _hasReachedSecondNode = true;
+            _isMovingToNode = false;
             TransitionOut();
         }
     }
