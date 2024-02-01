@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterHeight: 1
+  modelObject: {fileID: 373008334928577336}
 --- !u!1 &7936833182576120036
 GameObject:
   m_ObjectHideFlags: 0
