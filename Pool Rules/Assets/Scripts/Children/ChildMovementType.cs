@@ -12,6 +12,7 @@ public class ChildMovementType : MonoBehaviour
     private ChildRuleStates _childRuleStates;
     private NavMeshAgent _navMeshAgent;
     private float _originalSpeed;
+    private float speedLastFrame = 0f;
 
     private void Awake()
     {
@@ -23,7 +24,8 @@ public class ChildMovementType : MonoBehaviour
 
     private void Update()
     {
-        if (_navMeshAgent.velocity.magnitude > 0 && !_childRuleStates.IsSwimming)
+        // unsure why we need swimming here
+        if (_navMeshAgent.velocity.magnitude > 0f && speedLastFrame == 0f && !_childRuleStates.IsSwimming)
         {
             if (_navMeshAgent.speed <= movementSpeedThreshold)
             {
@@ -38,12 +40,14 @@ public class ChildMovementType : MonoBehaviour
                 _childRuleStates.IsRunning = true;
             }
         }
-        else
+        else if (_navMeshAgent.velocity.magnitude == 0f && speedLastFrame > 0f && !_childRuleStates.IsSwimming)
         {
-            _animationController.SetAnimation("idle");
+            _animationController.SetIdling();
             _childRuleStates.IsWalking = false;
             _childRuleStates.IsRunning = false;
         }
+
+        speedLastFrame = _navMeshAgent.velocity.magnitude;
     }
 
     public void SetNavMeshAgentSpeed(float speed)

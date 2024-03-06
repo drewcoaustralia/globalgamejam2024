@@ -11,6 +11,7 @@ public class ChildManager : MonoBehaviour
     public float childSpawnDelayMax = 10f;
     public int childSpawnCountMax = 3;
     private float childSpawnNextTime;
+    private int childCount = 0;
 
     void Start()
     {
@@ -29,7 +30,8 @@ public class ChildManager : MonoBehaviour
         if (num == -1) num = Random.Range(1, childSpawnCountMax + 1);
         for (int i=0; i<num; i++)
         {
-            GameObject.Instantiate(childPrefab, spawnPosition, Quaternion.identity);
+            GameObject newChild = GameObject.Instantiate(childPrefab, spawnPosition, Quaternion.identity);
+            newChild.name = "Child " + ++childCount;
         }
         ResetSpawnTimer();
     }

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float throwSpinMin = 30f;
     public float throwSpinMax = 60f;
     private Vector3 vel = Vector2.zero;
+    private float speedLastFrame = 0f;
     private Vector3 lastVelocityDirection = Vector2.zero;
     public Transform pickupPosition;
     public List<float> raycastAngles = new List<float> { -30, -20, -10, 0, 10, 20, 30 };
@@ -75,8 +76,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         vel = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        if (vel.magnitude > 0f) _animationController.SetAnimation("walking");
-        else _animationController.SetAnimation("idle");
+
+        if (vel.magnitude > 0f && speedLastFrame == 0f) _animationController.SetAnimation("walking");
+        if (vel.magnitude == 0f && speedLastFrame > 0f) _animationController.SetAnimation("idle");
+
+        speedLastFrame = vel.magnitude;
+
         if (vel.sqrMagnitude > 1.0f) vel.Normalize();
 
         if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)

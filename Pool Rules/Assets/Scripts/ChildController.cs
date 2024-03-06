@@ -20,20 +20,20 @@ public class ChildController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            MatCurrent = MatNaughty;
-            _rend.material = MatCurrent;
-        }
+        // if (Input.GetKeyDown(KeyCode.Z))
+        // {
+        //     MatCurrent = MatNaughty;
+        //     _rend.material = MatCurrent;
+        // }
 
-        if (isSelected)
-        {
-            _rend.material = MatSelected;
-        }
-        else
-        {
-            _rend.material = MatCurrent;
-        }
+        // if (isSelected)
+        // {
+        //     _rend.material = MatSelected;
+        // }
+        // else
+        // {
+        //     _rend.material = MatCurrent;
+        // }
     }
 
     public void SetSelected(bool selected = true)

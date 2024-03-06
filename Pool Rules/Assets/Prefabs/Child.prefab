@@ -799,6 +799,7 @@ MonoBehaviour:
     animSkin: {fileID: 0}
     animClothesTrunks: {fileID: 0}
     animClothesOnePiece: {fileID: 0}
+  currentAnimationStateForIdling: idle
   currentAnimationState: idle
 --- !u!82 &5714829862283506664
 AudioSource:

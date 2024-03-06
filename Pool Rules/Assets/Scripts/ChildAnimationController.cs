@@ -17,6 +17,8 @@ public class AnimationBundle
 public class ChildAnimationController : MonoBehaviour
 {
     public bool isLifeguard = false;
+    public float minHeight = 0.75f;
+    public float maxHeight = 1.25f;
     public List<Color> skinColors = new List<Color> {
                                      new Color32(0xFF, 0xDF, 0xC4, 1),
                                      new Color32(0xE7, 0xBC, 0x91, 1),
@@ -72,6 +74,7 @@ public class ChildAnimationController : MonoBehaviour
     public List<AnimationBundle> animations = new List<AnimationBundle>();
     private Dictionary<string, AnimationBundle> animationsDictionary = new Dictionary<string, AnimationBundle>();
     private AudioSource _audioSource;
+    public string currentAnimationStateForIdling = "idle";
     public string currentAnimationState = "idle";
 
     void InitialSetup()
@@ -93,6 +96,9 @@ public class ChildAnimationController : MonoBehaviour
             clothesOnePieceAnimFront = clothesOnePieceFront.GetComponent<Animator>();
             clothesOnePieceRendBack = clothesOnePieceBack.GetComponent<SpriteRenderer>();
             clothesOnePieceAnimBack = clothesOnePieceBack.GetComponent<Animator>();
+            float height = Random.Range(minHeight, maxHeight);
+            transform.localScale = new Vector3(height, height, height);
+            transform.localPosition = new Vector3(transform.localPosition.x, height, transform.localPosition.z);
         }
 
         SetAnimation(currentAnimationState);
@@ -106,6 +112,7 @@ public class ChildAnimationController : MonoBehaviour
         tempColor = skinRend.color;
         if (!isLifeguard)
         {
+
             Color clothingColor = clothesColors[Random.Range(0, skinColors.Count)];
             clothesTrunksRendFront.color = clothingColor;
             clothesTrunksRendBack.color = clothingColor;
@@ -132,14 +139,15 @@ public class ChildAnimationController : MonoBehaviour
 
     public void SetAnimation(string name)
     {
+        Debug.Log("Attempting to set animation for " + gameObject.name + " to " + name);
         if (currentAnimationState == name)
         {
-            //Debug.LogWarning("Already in animation state " + name);
+            Debug.LogWarning("Already in animation state " + name);
             return;
         }
         if (!animationsDictionary.TryGetValue(name, out AnimationBundle bundle))
         {
-            //Debug.LogWarning("Animation " + name + " doesn't exist!");
+            Debug.LogWarning("Animation " + name + " doesn't exist!");
             return;
         }
 
@@ -159,6 +167,21 @@ public class ChildAnimationController : MonoBehaviour
             clothesOnePieceAnimFront.runtimeAnimatorController = bundle.animClothesOnePiece;
             clothesOnePieceAnimBack.runtimeAnimatorController = bundle.animClothesOnePiece;
         }
+    }
+
+    public void SetIdling()
+    {
+        SetAnimation(currentAnimationStateForIdling);
+    }
+
+    public void ChangeIdlingState(string state)
+    {
+        if (!animationsDictionary.TryGetValue(name, out AnimationBundle bundle))
+        {
+            Debug.LogWarning("Animation " + name + " doesn't exist!");
+            return;
+        }
+        currentAnimationStateForIdling = state;
     }
 
     public void SetSelected(bool selected = true)

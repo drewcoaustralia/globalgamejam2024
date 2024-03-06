@@ -28,6 +28,9 @@ public class AIActionDrowning : AIAction
     {
         base.OnEnterState();
         childNavMeshAgent.baseOffset = drowningBaseOffset;
+        ChildAnimationController animator = childNavMeshAgent.gameObject.GetComponent<ChildAnimationController>();
+        animator.ChangeIdlingState("drowning");
+        animator.SetAnimation("drowning");
     }
 
     public override void OnExitState()
