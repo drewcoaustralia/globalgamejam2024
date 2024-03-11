@@ -76,6 +76,8 @@ public class ChildAnimationController : MonoBehaviour
     private AudioSource _audioSource;
     public string currentAnimationStateForIdling = "idle";
     public string currentAnimationState = "idle";
+    public float currentAnimationSpeed = 1f;
+    public bool isIdling = false;
 
     void InitialSetup()
     {
@@ -139,7 +141,7 @@ public class ChildAnimationController : MonoBehaviour
 
     public void SetAnimation(string name)
     {
-        Debug.Log("Attempting to set animation for " + gameObject.name + " to " + name);
+        // Debug.Log("Attempting to set animation for " + gameObject.name + " to " + name);
         if (currentAnimationState == name)
         {
             Debug.LogWarning("Already in animation state " + name);
@@ -152,6 +154,7 @@ public class ChildAnimationController : MonoBehaviour
         }
 
         currentAnimationState = name;
+        isIdling = (currentAnimationState == currentAnimationStateForIdling);
         _audioSource.Stop();
         _audioSource.loop = bundle.audioLoops;
         _audioSource.clip = bundle.sfx;
@@ -167,10 +170,42 @@ public class ChildAnimationController : MonoBehaviour
             clothesOnePieceAnimFront.runtimeAnimatorController = bundle.animClothesOnePiece;
             clothesOnePieceAnimBack.runtimeAnimatorController = bundle.animClothesOnePiece;
         }
+        ApplyAnimationSpeed();
+    }
+
+    private void ApplyAnimationSpeed()
+    {
+        float tempSpeed = currentAnimationSpeed;
+        if (isIdling) tempSpeed = 1f;
+        if (!animationsDictionary.TryGetValue(currentAnimationState, out AnimationBundle bundle))
+        {
+            Debug.LogWarning("Animation " + currentAnimationState + " doesn't exist!");
+            return;
+        }
+
+        if (bundle.sfx != null)
+        {
+            _audioSource.pitch = tempSpeed;
+        }
+        skinAnim.speed = tempSpeed;
+        clothesTrunksAnimFront.speed = tempSpeed;
+        clothesTrunksAnimBack.speed = tempSpeed;
+        if (!isLifeguard)
+        {
+            clothesOnePieceAnimFront.speed = tempSpeed;
+            clothesOnePieceAnimBack.speed = tempSpeed;
+        }
+    }
+
+    public void SetAnimationSpeed(float speed)
+    {
+        currentAnimationSpeed = speed;
+        ApplyAnimationSpeed();
     }
 
     public void SetIdling()
     {
+        Debug.Log("Setting idle for " + gameObject.name);
         SetAnimation(currentAnimationStateForIdling);
     }
 
