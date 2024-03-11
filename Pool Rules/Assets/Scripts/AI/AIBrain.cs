@@ -47,16 +47,16 @@ public class AIBrain : MonoBehaviour
         if (CurrentState == null)
             return;
 
-        if (Time.time - _lastActionsUpdate > ActionsFrequency)
+        if (Time.timeSinceLevelLoad - _lastActionsUpdate > ActionsFrequency)
         {
             CurrentState.PerformActions();
-            _lastActionsUpdate = Time.time;
+            _lastActionsUpdate = Time.timeSinceLevelLoad;
         }
 
-        if (Time.time - _lastDecisionsUpdate > DecisionFrequency)
+        if (Time.timeSinceLevelLoad - _lastDecisionsUpdate > DecisionFrequency)
         {
             CurrentState.EvaluateTransitions();
-            _lastDecisionsUpdate = Time.time;
+            _lastDecisionsUpdate = Time.timeSinceLevelLoad;
         }
     }
 
