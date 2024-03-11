@@ -12242,6 +12242,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3939950565043079201, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
+      propertyPath: lifeLostSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 34480d3c6769a1d44a5c0a1b2a09d1e7, type: 3}
+    - target: {fileID: 3939950565043079201, guid: 0a926ba86acde3743b2ed749ecc8e9ad, type: 3}
       propertyPath: onGameOver.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}

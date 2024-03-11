@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ScoreManager : Singleton<ScoreManager>
 {
+    public AudioClip lifeLostSFX;
     public UnityEvent onFirstLifeLost;
     public UnityEvent onSecondLifeLost;
     public UnityEvent onThirdLifeLost;
@@ -21,6 +22,7 @@ public class ScoreManager : Singleton<ScoreManager>
     public void LoseLife()
     {
         _fails++;
+        if (lifeLostSFX != null) AudioManager.Instance.PlayAudio(lifeLostSFX, 1.25f);
 
         if (_fails == 1)
         {

@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     private bool handsEmpty = true;
     private GameObject heldObj = null;
     private ChildAnimationController _animationController;
+    public List<AudioClip> throwSounds = new List<AudioClip>();
+    // public List<AudioClip> walkSounds = new List<AudioClip>();
+    // public List<AudioClip> swimSounds = new List<AudioClip>();
+    
 
     void Start()
     {
@@ -117,6 +121,7 @@ public class PlayerController : MonoBehaviour
             heldObj.GetComponent<Rigidbody>().AddForce(throwForce,ForceMode.Impulse);
             float spin = Random.Range(throwSpinMin, throwSpinMax);
             heldObj.GetComponent<Rigidbody>().AddTorque(transform.right * spin, ForceMode.Impulse);
+            if (throwSounds.Count > 0) AudioManager.Instance.PlayAudio(throwSounds[Random.Range(0, throwSounds.Count)]);
             
             if (heldObj.GetComponent<ChildRuleStates>().HasBrokenARule)
             {

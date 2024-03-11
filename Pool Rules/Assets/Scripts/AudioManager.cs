@@ -28,7 +28,6 @@ public class AudioManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("scene loaded " + scene.name);
         _sources[0].Stop();
         if (scene.name == "MainMenu")
         {
@@ -54,12 +53,13 @@ public class AudioManager : MonoBehaviour
         _sources[1].Play();
     }
 
-    public void PlayAudio(AudioClip clip)
+    public AudioSource PlayAudio(AudioClip clip, float delay = 0f)
     {
         GameObject obj = new GameObject("Temp Audio Object");
         AudioSource src = obj.AddComponent<AudioSource>();
         src.clip = clip;
-        src.PlayOneShot(src.clip);
-        Destroy(obj, clip.length + 1);
+        src.PlayDelayed(delay);
+        Destroy(obj, clip.length + delay + 0.5f);
+        return src;
     }
 }

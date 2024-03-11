@@ -746,6 +746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLifeguard: 0
+  minHeight: 0.75
+  maxHeight: 1.25
   skinColors:
   - {r: 1, g: 0.8745098, b: 0.76862746, a: 1}
   - {r: 0.96862745, g: 0.8862745, b: 0.67058825, a: 1}
@@ -762,45 +764,101 @@ MonoBehaviour:
   clothesTrunksBack: {fileID: 8455711421719906331}
   clothesOnePieceFront: {fileID: 5879751241662756189}
   clothesOnePieceBack: {fileID: 1753649743253865100}
+  throwSounds:
+  - {fileID: 8300000, guid: a2b360b229a42824c9f1bf903c04d7b6, type: 3}
+  - {fileID: 8300000, guid: fd71fbc5cb93c114a8a0e6ca4e8ce5d1, type: 3}
+  - {fileID: 8300000, guid: f3b279ac1d0b94b469e6cb4b0fb441f5, type: 3}
+  - {fileID: 8300000, guid: aa7bf163480b455439cd1f732feba091, type: 3}
+  - {fileID: 8300000, guid: 6e871fa039c8e784bbedb06dac65aaa2, type: 3}
+  - {fileID: 8300000, guid: 57be0d7b9e27cdc48be9263723776d9f, type: 3}
+  - {fileID: 8300000, guid: 90a03d92413dcfb458cc20d732ef11bd, type: 3}
+  - {fileID: 8300000, guid: a8957b22ebcf9fa499c0a8f4cfa987e6, type: 3}
+  - {fileID: 8300000, guid: 63aed3e78c723a8478ad5c6236b28c97, type: 3}
+  - {fileID: 8300000, guid: 76515b2e3ea071b4186a219c39ddb461, type: 3}
+  - {fileID: 8300000, guid: de335b8e69545e54f81d38cf25b6ee9e, type: 3}
+  - {fileID: 8300000, guid: 37c07963dd69bf544b163d8000376e98, type: 3}
+  - {fileID: 8300000, guid: b3cb9726cee30d74b8fe20e7b3d3e6ab, type: 3}
+  drownSounds: []
+  jumpSounds:
+  - {fileID: 8300000, guid: c60e12041e4f1ec448e23dd83f982273, type: 3}
+  - {fileID: 8300000, guid: c7c700671788f0940a5824afe914d8bc, type: 3}
+  - {fileID: 8300000, guid: 070ac75e482ed7b41ac54421b7384a96, type: 3}
+  - {fileID: 8300000, guid: 10fb5cfb4de9f764bb042cda2f35cbe8, type: 3}
+  - {fileID: 8300000, guid: e62a7c2f3b1f77e4aa43ff6b54dd5dbc, type: 3}
+  - {fileID: 8300000, guid: 319ce04efc88a67439a9125a578f5a68, type: 3}
+  - {fileID: 8300000, guid: 2df177a62297f0e4cbdecd180145d3f5, type: 3}
+  - {fileID: 8300000, guid: d06fab0c80bd86e4eb00d407d8cc92ef, type: 3}
+  - {fileID: 8300000, guid: 6acf7d853b0274948bda50663a3ce2e1, type: 3}
+  - {fileID: 8300000, guid: ca0bd0f5f9d449d4382055de9080e5ee, type: 3}
+  - {fileID: 8300000, guid: 0bb8e6ee7431f0444a5f39afcd993ed9, type: 3}
+  - {fileID: 8300000, guid: a98cbe27502ed454696c51aa419c6afb, type: 3}
+  - {fileID: 8300000, guid: d304d9fbb20404f4d9528cb975d4ce38, type: 3}
+  - {fileID: 8300000, guid: 5bd96abd79feeeb40b0ef3c27fd89e65, type: 3}
+  walkSounds: []
+  runSounds: []
+  swimSounds: []
+  pickupSounds: []
   animations:
   - name: idle
     sfx: {fileID: 0}
     audioLoops: 0
+    audioDelay: 0
+    audioFadePerSecond: 0
     animSkin: {fileID: 9100000, guid: 4c673f07eb141fb438eeef5a0fccd148, type: 2}
     animClothesTrunks: {fileID: 9100000, guid: 5daf6c0080513664bbb51cc14f691859, type: 2}
     animClothesOnePiece: {fileID: 9100000, guid: e16cf39855c79c6449b839d606486341, type: 2}
   - name: walking
     sfx: {fileID: 0}
-    audioLoops: 0
+    audioLoops: 1
+    audioDelay: 0
+    audioFadePerSecond: 0
     animSkin: {fileID: 9100000, guid: e316805465341e54796f6f7915712f19, type: 2}
     animClothesTrunks: {fileID: 9100000, guid: 05db6468435a0fa4fb79952b67ef116f, type: 2}
     animClothesOnePiece: {fileID: 9100000, guid: e71504deb28de7d4b94edfd4f886885c, type: 2}
   - name: running
     sfx: {fileID: 0}
-    audioLoops: 0
+    audioLoops: 1
+    audioDelay: 0
+    audioFadePerSecond: 0
     animSkin: {fileID: 9100000, guid: e316805465341e54796f6f7915712f19, type: 2}
     animClothesTrunks: {fileID: 9100000, guid: 05db6468435a0fa4fb79952b67ef116f, type: 2}
     animClothesOnePiece: {fileID: 9100000, guid: e71504deb28de7d4b94edfd4f886885c, type: 2}
   - name: drowning
     sfx: {fileID: 0}
     audioLoops: 0
+    audioDelay: 0
+    audioFadePerSecond: 0
     animSkin: {fileID: 9100000, guid: 2f7a9b636cdffb740985a4f464d6f12e, type: 2}
     animClothesTrunks: {fileID: 9100000, guid: 882d1ee7d5499624dab996bbe6e02b24, type: 2}
     animClothesOnePiece: {fileID: 9100000, guid: 64c9a79e739785244bc35228ffb7647f, type: 2}
   - name: flailing
-    sfx: {fileID: 8300000, guid: 8ba20b332ef535a48984465744032c44, type: 3}
+    sfx: {fileID: 0}
     audioLoops: 0
+    audioDelay: 0.25
+    audioFadePerSecond: 0.9
     animSkin: {fileID: 9100000, guid: 2962c097b66028449b809c4d17b844ec, type: 2}
     animClothesTrunks: {fileID: 9100000, guid: f4dc43d7f80bb92479bd946c424746b8, type: 2}
     animClothesOnePiece: {fileID: 9100000, guid: bf144866022bfa947aecc199f531d03a, type: 2}
   - name: jumping
     sfx: {fileID: 0}
     audioLoops: 0
+    audioDelay: 1
+    audioFadePerSecond: 0
     animSkin: {fileID: 0}
     animClothesTrunks: {fileID: 0}
     animClothesOnePiece: {fileID: 0}
+  - name: swimming
+    sfx: {fileID: 0}
+    audioLoops: 1
+    audioDelay: 0
+    audioFadePerSecond: 0
+    animSkin: {fileID: 9100000, guid: 4c673f07eb141fb438eeef5a0fccd148, type: 2}
+    animClothesTrunks: {fileID: 9100000, guid: 5daf6c0080513664bbb51cc14f691859, type: 2}
+    animClothesOnePiece: {fileID: 9100000, guid: e16cf39855c79c6449b839d606486341, type: 2}
   currentAnimationStateForIdling: idle
   currentAnimationState: idle
+  currentAnimationSpeed: 1
+  isIdling: 0
 --- !u!82 &5714829862283506664
 AudioSource:
   m_ObjectHideFlags: 0

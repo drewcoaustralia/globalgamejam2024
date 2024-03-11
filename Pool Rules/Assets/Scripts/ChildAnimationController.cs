@@ -9,6 +9,8 @@ public class AnimationBundle
     public string name;
     public AudioClip sfx;
     public bool audioLoops = false;
+    public float audioDelay = 0f;
+    public float audioFadePerSecond = 0f;
     public RuntimeAnimatorController animSkin;
     public RuntimeAnimatorController animClothesTrunks;
     public RuntimeAnimatorController animClothesOnePiece;
@@ -71,6 +73,15 @@ public class ChildAnimationController : MonoBehaviour
 
     private Color tempColor;
 
+    public List<AudioClip> throwSounds = new List<AudioClip>();
+    public List<AudioClip> drownSounds = new List<AudioClip>();
+    public List<AudioClip> jumpSounds = new List<AudioClip>();
+    public List<AudioClip> walkSounds = new List<AudioClip>();
+    public List<AudioClip> runSounds = new List<AudioClip>();
+    public List<AudioClip> swimSounds = new List<AudioClip>();
+    public List<AudioClip> pickupSounds = new List<AudioClip>();
+    
+
     public List<AnimationBundle> animations = new List<AnimationBundle>();
     private Dictionary<string, AnimationBundle> animationsDictionary = new Dictionary<string, AnimationBundle>();
     private AudioSource _audioSource;
@@ -112,6 +123,7 @@ public class ChildAnimationController : MonoBehaviour
     {
         if (randomizeSkin) skinRend.color = skinColors[Random.Range(0, skinColors.Count)];
         tempColor = skinRend.color;
+
         if (!isLifeguard)
         {
 
@@ -136,6 +148,30 @@ public class ChildAnimationController : MonoBehaviour
                 clothesTrunksRendFront.color = new Color(clothesTrunksRendFront.color.r, clothesTrunksRendFront.color.g, clothesTrunksRendFront.color.b, 1f);
                 clothesTrunksRendBack.color = new Color(clothesTrunksRendBack.color.r, clothesTrunksRendBack.color.g, clothesTrunksRendBack.color.b, 1f);
             }
+
+            if (throwSounds.Count > 0) animationsDictionary["flailing"].sfx = throwSounds[Random.Range(0, throwSounds.Count)];
+            if (drownSounds.Count > 0) animationsDictionary["drowning"].sfx = drownSounds[Random.Range(0, drownSounds.Count)];
+            if (jumpSounds.Count > 0) animationsDictionary["jumping"].sfx = jumpSounds[Random.Range(0, jumpSounds.Count)];
+            if (walkSounds.Count > 0) animationsDictionary["walking"].sfx = walkSounds[Random.Range(0, walkSounds.Count)];
+            if (runSounds.Count > 0) animationsDictionary["running"].sfx = runSounds[Random.Range(0, runSounds.Count)];
+            if (swimSounds.Count > 0) animationsDictionary["swimming"].sfx = swimSounds[Random.Range(0, swimSounds.Count)];
+        }
+        else
+        {
+            if (throwSounds.Count > 0) animationsDictionary["throw"].sfx = throwSounds[Random.Range(0, throwSounds.Count)];
+            if (pickupSounds.Count > 0) animationsDictionary["pickup"].sfx = pickupSounds[Random.Range(0, pickupSounds.Count)];
+            if (walkSounds.Count > 0) animationsDictionary["walking"].sfx = walkSounds[Random.Range(0, walkSounds.Count)];
+        }
+
+    }
+
+    private IEnumerator FadeVolume(float delay, float fadePerSecond)
+    {
+        yield return new WaitForSeconds(delay);
+        while (_audioSource.volume > 0)
+        {
+            _audioSource.volume -= fadePerSecond * Time.deltaTime;
+            yield return null;
         }
     }
 
@@ -160,7 +196,8 @@ public class ChildAnimationController : MonoBehaviour
         _audioSource.clip = bundle.sfx;
         if (bundle.sfx != null)
         {
-            _audioSource.Play();
+            _audioSource.PlayDelayed(bundle.audioDelay);
+            if (bundle.audioFadePerSecond > 0f) StartCoroutine(FadeVolume(bundle.audioDelay, bundle.audioFadePerSecond));
         }
         skinAnim.runtimeAnimatorController = bundle.animSkin;
         clothesTrunksAnimFront.runtimeAnimatorController = bundle.animClothesTrunks;
@@ -205,7 +242,7 @@ public class ChildAnimationController : MonoBehaviour
 
     public void SetIdling()
     {
-        Debug.Log("Setting idle for " + gameObject.name);
+        //Debug.Log("Setting idle for " + gameObject.name);
         SetAnimation(currentAnimationStateForIdling);
     }
 
