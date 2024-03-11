@@ -19570,16 +19570,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 2068489347}
     m_Modifications:
     - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.size
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: defaultSting
+      value: 
+      objectReference: {fileID: 8300000, guid: 2af738c8e880b11449348a89dca78e2c, type: 3}
     - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.data[0].timer
-      value: 1e+11
-      objectReference: {fileID: 0}
+      propertyPath: scheduledChanges.Array.data[0].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 41d6374fb0c782042b009bdfb87299b1, type: 3}
     - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
-      propertyPath: scheduledChanges.Array.data[0].ruleName
-      value: No Running
+      propertyPath: scheduledChanges.Array.data[5].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 85acd15b1fc70da41a5dd7b33f707bb6, type: 3}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[6].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f0c8e2fd8f01334abef80455df1a02f, type: 3}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[7].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 8908b30941dbdbc4a8e959d952554300, type: 3}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[8].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 48b3b93a7368c8a4a9b0d94fc4276f9a, type: 3}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[18].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 0514dab198ce9ee4bbb5ba815ec3dba5, type: 3}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[36].sting
+      value: 
+      objectReference: {fileID: 8300000, guid: 8538963487514d94ab0aea0947b3159b, type: 3}
+    - target: {fileID: 6898707898212899854, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
+      propertyPath: scheduledChanges.Array.data[42].sting
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6991117219129910791, guid: 2e20bf20e43970946bb02348fe88b711, type: 3}
       propertyPath: m_LocalPosition.x

@@ -5,20 +5,24 @@ using UnityEngine;
 [Serializable]
 public class ScheduledRuleChange
 {
+    public bool started = false;
     public string ruleName;
     public float startTime;
     public float timer;
+    public AudioClip sting;
 
-    public ScheduledRuleChange(string ruleName, float startTime, float timer)
+    public ScheduledRuleChange(string ruleName, float startTime, float timer, AudioClip sting)
     {
+        started = false;
         this.ruleName = ruleName;
         this.startTime = startTime;
         this.timer = timer;
+        this.sting = sting;
     }
 
     public bool ShouldStart()
     {
-        return Time.time >= startTime;
+        return (!started && Time.time >= startTime);
     }
 
     public bool IsTimeElapsed()
@@ -33,6 +37,8 @@ public class RuleScheduler : MonoBehaviour
 
     private RuleManager _ruleManager;
 
+    public AudioClip defaultSting;
+
     void Start()
     {
         _ruleManager = RuleManager.Instance;
@@ -45,7 +51,11 @@ public class RuleScheduler : MonoBehaviour
             ScheduledRuleChange change = scheduledChanges[i];
             if (change.ShouldStart())
             {
+                change.started = true;
+                Debug.Log("starting rule " + change.ruleName);
                 _ruleManager.SetRule(change.ruleName, true);
+                if (change.sting != null) AudioManager.Instance.PlayAudio(change.sting);
+                else AudioManager.Instance.PlayAudio(defaultSting);
             }
 
             if (change.IsTimeElapsed())
