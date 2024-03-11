@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float speedLastFrame = 0f;
     private Vector3 lastVelocityDirection = Vector2.zero;
     public Transform pickupPosition;
+    public Transform raycastOrigin;
     public List<float> raycastAngles = new List<float> { -30, -20, -10, 0, 10, 20, 30 };
     private GameObject closestChild = null;
     //private List<GameObject> foundChildren = new List<GameObject>();
@@ -43,18 +44,18 @@ public class PlayerController : MonoBehaviour
 
         foreach (float angle in raycastAngles)
         {
-            if (Physics.Raycast(transform.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection, out hit, pickupDist, layerMask))
+            if (Physics.Raycast(raycastOrigin.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection, out hit, pickupDist, layerMask))
             {
                 if (hit.distance < closestDistanceTemp)
                 {
                     closestDistanceTemp = hit.distance;
                     closestChildTemp = hit.transform.gameObject;
                 }
-                Debug.DrawRay(transform.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection * hit.distance, Color.red);
+                Debug.DrawRay(raycastOrigin.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection * hit.distance, Color.red);
             }
             else
             {
-                Debug.DrawRay(transform.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection * pickupDist, Color.white);
+                Debug.DrawRay(raycastOrigin.position, Quaternion.Euler(0, angle, 0) * lastVelocityDirection * pickupDist, Color.white);
             }
         }
 
