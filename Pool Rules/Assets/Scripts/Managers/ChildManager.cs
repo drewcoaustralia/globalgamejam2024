@@ -22,7 +22,7 @@ public class ChildManager : MonoBehaviour
 
     void ResetSpawnTimer()
     {
-        childSpawnNextTime = Time.time + Random.Range(childSpawnDelayMin, childSpawnDelayMax);
+        childSpawnNextTime = Time.timeSinceLevelLoad + Random.Range(childSpawnDelayMin, childSpawnDelayMax);
     }
 
     void Spawn(int num = -1)
@@ -38,6 +38,6 @@ public class ChildManager : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= childSpawnNextTime || Input.GetKeyDown(KeyCode.Backspace)) Spawn();
+        if (Time.timeSinceLevelLoad >= childSpawnNextTime || Input.GetKeyDown(KeyCode.Backspace)) Spawn();
     }
 }

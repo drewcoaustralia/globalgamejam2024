@@ -22,12 +22,12 @@ public class ScheduledRuleChange
 
     public bool ShouldStart()
     {
-        return (!started && Time.time >= startTime);
+        return (!started && Time.timeSinceLevelLoad >= startTime);
     }
 
     public bool IsTimeElapsed()
     {
-        return Time.time >= startTime + timer;
+        return Time.timeSinceLevelLoad >= startTime + timer;
     }
 }
 
